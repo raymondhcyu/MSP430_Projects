@@ -6,15 +6,15 @@
 Building file: "../main.c"
 Invoking: MSP430 Compiler
 "D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/test" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
-"../main.c", line 59: warning #112-D: statement is unreachable
-"../main.c", line 36: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
-"../main.c", line 36: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
-"../main.c", line 39: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
-"../main.c", line 39: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
-"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
-"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
-"../main.c", line 45: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
-"../main.c", line 45: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 60: warning #112-D: statement is unreachable
+"../main.c", line 37: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 37: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 40: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 40: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 43: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 43: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 46: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 46: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
 Finished building: "../main.c"
  
 Building target: "test.out"

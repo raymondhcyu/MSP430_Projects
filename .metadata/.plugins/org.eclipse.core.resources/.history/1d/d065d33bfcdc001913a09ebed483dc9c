@@ -14,7 +14,6 @@ int main(void)
 	
 	// Access J.0 ports and change direction; BIT0 generic for 0x01
 	PJDIR |= BIT0 + BIT1 + BIT2 + BIT3;
-//	PJREN |= BIT0 + BIT1 + BIT2 + BIT3; // No point adding pullups b/c LEDs already have resistors in series; pullups are internal
 
 //    P3DIR |= BIT4;
 //    P3DIR |= BIT5;
