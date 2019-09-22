@@ -16,10 +16,10 @@ int main(void)
 	PJDIR |= BIT0 + BIT1 + BIT2 + BIT3;
 //	PJREN |= BIT0 + BIT1 + BIT2 + BIT3; // No point adding pullups b/c LEDs already have resistors in series; pullups are internal
 
-//    P3DIR |= BIT4;
-//    P3DIR |= BIT5;
-//    P3DIR |= BIT6;
-//    P3DIR |= BIT7;
+    P3DIR |= BIT4;
+    P3DIR |= BIT5;
+    P3DIR |= BIT6;
+    P3DIR |= BIT7;
 
     // Configure PJ and P3 ports (LEDs) as outputs
 	PJOUT |= BIT0 + BIT1 + BIT2 + BIT3;
@@ -27,24 +27,24 @@ int main(void)
 //    PJOUT |= BIT2;
 //    PJOUT |= BIT3;
 
-//    P3OUT |= BIT4;
-//    P3OUT |= BIT5;
-//    P3OUT |= BIT6;
-//    P3OUT |= BIT7;
+    P3OUT |= BIT4;
+    P3OUT |= BIT5;
+    P3OUT |= BIT6;
+    P3OUT |= BIT7;
 
 	while(1) {
-	    PJOUT ^= BIT0; // toggle bit
-	    for (i = 0; i < 20000; i++)
-	        _NOP(); // one way to delay
-        PJOUT ^= BIT1;
-        for (i = 0; i < 20000; i++)
-            _NOP(); // one way to delay
-        PJOUT ^= BIT2;
-        for (i = 0; i < 20000; i++)
-            _NOP(); // one way to delay
-        PJOUT ^= BIT3;
-        for (i = 0; i < 20000; i++)
-            _NOP(); // one way to delay
+//	    PJOUT ^= BIT0; // toggle bit
+//	    for (i = 0; i < 20000; i++)
+//	        _NOP(); // one way to delay
+//        PJOUT ^= BIT1;
+//        for (i = 0; i < 20000; i++)
+//            _NOP(); // one way to delay
+//        PJOUT ^= BIT2;
+//        for (i = 0; i < 20000; i++)
+//            _NOP(); // one way to delay
+//        PJOUT ^= BIT3;
+//        for (i = 0; i < 20000; i++)
+//            _NOP(); // one way to delay
 //        P3OUT ^= BIT4;
 //        for (i = 0; i < 20000; i++)
 //            _NOP(); // one way to delay
