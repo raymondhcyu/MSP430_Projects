@@ -1,10 +1,10 @@
 ******************************************************************************
                   MSP430 Linker PC v18.12.2                    
 ******************************************************************************
->> Linked Sat Sep 21 22:04:17 2019
+>> Linked Sat Sep 21 22:07:36 2019
 
 OUTPUT FILE NAME:   <test.out>
-ENTRY POINT SYMBOL: "_c_int00_noinit_noargs_mpu"  address: 0000c2bc
+ENTRY POINT SYMBOL: "_c_int00_noinit_noargs_mpu"  address: 0000c2a4
 
 
 MEMORY CONFIGURATION
@@ -17,7 +17,7 @@ MEMORY CONFIGURATION
   INFOB                 00001800   00000080  00000000  00000080  RWIX
   INFOA                 00001880   00000080  00000000  00000080  RWIX
   RAM                   00001c00   00000400  000000a0  00000360  RWIX
-  FRAM                  0000c200   00003d80  000000e6  00003c9a  RWIX
+  FRAM                  0000c200   00003d80  000000ce  00003cb2  RWIX
   JTAGSIGNATURE         0000ff80   00000004  00000004  00000000  RWIX  ffff 
   BSLSIGNATURE          0000ff84   00000004  00000004  00000000  RWIX  ffff 
   IPESIGNATURE          0000ff88   00000008  00000008  00000000  RWIX  ffff 
@@ -108,13 +108,13 @@ section   page    origin      length       input sections
 
 .const     0    0000c200    00000000     UNINITIALIZED
 
-.text      0    0000c200    000000e6     
-                  0000c200    0000009a     main.obj (.text:main)
-                  0000c29a    00000022     MPU_INIT_FR57XX_LIB_CCS_msp430_large_code_small_data.lib : mpu_init_fr57xx.obj (.text:__mpu_init)
-                  0000c2bc    00000018     rts430x_lc_sd_eabi.lib : boot.c.obj (.text:_isr:_c_int00_noinit_noargs_mpu)
-                  0000c2d4    00000008                            : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
-                  0000c2dc    00000006                            : exit.c.obj (.text:abort)
-                  0000c2e2    00000004                            : pre_init.c.obj (.text:_system_pre_init)
+.text      0    0000c200    000000ce     
+                  0000c200    00000082     main.obj (.text:main)
+                  0000c282    00000022     MPU_INIT_FR57XX_LIB_CCS_msp430_large_code_small_data.lib : mpu_init_fr57xx.obj (.text:__mpu_init)
+                  0000c2a4    00000018     rts430x_lc_sd_eabi.lib : boot.c.obj (.text:_isr:_c_int00_noinit_noargs_mpu)
+                  0000c2bc    00000008                            : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
+                  0000c2c4    00000006                            : exit.c.obj (.text:abort)
+                  0000c2ca    00000004                            : pre_init.c.obj (.text:_system_pre_init)
 
 .stack     0    00001f60    000000a0     UNINITIALIZED
                   00001f60    00000002     rts430x_lc_sd_eabi.lib : boot.c.obj (.stack)
@@ -219,9 +219,9 @@ MODULE SUMMARY
        Module                code   ro data   rw data
        ------                ----   -------   -------
     .\
-       main.obj              154    0         0      
+       main.obj              130    0         0      
     +--+---------------------+------+---------+---------+
-       Total:                154    0         0      
+       Total:                130    0         0      
                                                      
     D:\Texas Instruments\ccs\ccs_base\msp430\lib\FR57xx\MPU_INIT_FR57XX_LIB_CCS_msp430_large_code_small_data.lib
        mpu_init_fr57xx.obj   34     0         0      
@@ -262,7 +262,7 @@ MODULE SUMMARY
                                                      
        Stack:                0      0         160    
     +--+---------------------+------+---------+---------+
-       Grand Total:          230    50        160    
+       Grand Total:          206    50        160    
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
@@ -301,7 +301,7 @@ address   name
 00000712  ADC10MEM0_L               
 000004be  BCD2BIN                   
 000004bc  BIN2BCD                   
-0000c2dc  C$$EXIT                   
+0000c2c4  C$$EXIT                   
 000008c0  CDCTL0                    
 000008c1  CDCTL0_H                  
 000008c0  CDCTL0_L                  
@@ -810,7 +810,7 @@ address   name
 0000015c  WDTCTL_L                  
 00002000  __STACK_END               
 000000a0  __STACK_SIZE              
-0000c2d4  __TI_ISR_TRAP             
+0000c2bc  __TI_ISR_TRAP             
 0000ffce  __TI_int31                
 0000ffd0  __TI_int32                
 0000ffd2  __TI_int33                
@@ -839,14 +839,14 @@ ffffffff  __TI_pprof_out_hndl
 ffffffff  __TI_prof_data_size       
 ffffffff  __TI_prof_data_start      
 ffffffff  __c_args__                
-0000c29a  __mpu_init                
+0000c282  __mpu_init                
 00007513  __mpusam                  
 00000101  __mpuseg                  
-0000c2bc  _c_int00_noinit_noargs_mpu
+0000c2a4  _c_int00_noinit_noargs_mpu
 0000fffe  _reset_vector             
 00001f60  _stack                    
-0000c2e2  _system_pre_init          
-0000c2dc  abort                     
+0000c2ca  _system_pre_init          
+0000c2c4  abort                     
 0000c200  fram_ro_start             
 0000c200  fram_rw_start             
 0000c200  fram_rx_start             
@@ -1408,12 +1408,12 @@ address   name
 0000c200  fram_rw_start             
 0000c200  fram_rx_start             
 0000c200  main                      
-0000c29a  __mpu_init                
-0000c2bc  _c_int00_noinit_noargs_mpu
-0000c2d4  __TI_ISR_TRAP             
-0000c2dc  C$$EXIT                   
-0000c2dc  abort                     
-0000c2e2  _system_pre_init          
+0000c282  __mpu_init                
+0000c2a4  _c_int00_noinit_noargs_mpu
+0000c2bc  __TI_ISR_TRAP             
+0000c2c4  C$$EXIT                   
+0000c2c4  abort                     
+0000c2ca  _system_pre_init          
 0000ffce  __TI_int31                
 0000ffd0  __TI_int32                
 0000ffd2  __TI_int33                
