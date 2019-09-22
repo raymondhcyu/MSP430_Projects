@@ -18,16 +18,16 @@ int main(void)
 	PJDIR |= BIT2;
     PJDIR |= BIT3;
 
-//    P3DIR |= BIT4;
-//    P3DIR |= BIT5;
-//    P3DIR |= BIT6;
-//    P3DIR |= BIT7;
+    P3DIR |= BIT4;
+    P3DIR |= BIT5;
+    P3DIR |= BIT6;
+    P3DIR |= BIT7;
 
     // Configure PJ and P3 ports (LEDs) as outputs
-	PJOUT |= BIT0;
-	PJOUT |= BIT1;
-    PJOUT |= BIT2;
-    PJOUT |= BIT3;
+//	PJOUT |= BIT0;
+//	PJOUT |= BIT1;
+//    PJOUT |= BIT2;
+//    PJOUT |= BIT3;
 //
 //    P3OUT |= BIT4;
 //    P3OUT |= BIT5;
@@ -47,16 +47,16 @@ int main(void)
         PJOUT ^= BIT3;
         for (i = 0; i < 20000; i++)
             _NOP(); // one way to delay
-//        P3OUT ^= BIT4;
-//        for (i = 0; i < 20000; i++)
-//            _NOP(); // one way to delay
-//        P3OUT ^= BIT5;
-//        for (i = 0; i < 20000; i++)
-//            _NOP(); // one way to delay
-//        P3OUT ^= BIT6;
-//        for (i = 0; i < 20000; i++)
-//            _NOP(); // one way to delay
-//        P3OUT ^= BIT7;
+        P3OUT ^= BIT4;
+        for (i = 0; i < 20000; i++)
+            _NOP(); // one way to delay
+        P3OUT ^= BIT5;
+        for (i = 0; i < 20000; i++)
+            _NOP(); // one way to delay
+        P3OUT ^= BIT6;
+        for (i = 0; i < 20000; i++)
+            _NOP(); // one way to delay
+        P3OUT ^= BIT7;
 	}
 
 	return 0;

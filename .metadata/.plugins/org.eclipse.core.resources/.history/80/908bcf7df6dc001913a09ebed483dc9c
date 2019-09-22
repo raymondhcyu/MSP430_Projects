@@ -18,10 +18,10 @@ int main(void)
 	PJDIR |= BIT2;
     PJDIR |= BIT3;
 
-//    P3DIR |= BIT4;
-//    P3DIR |= BIT5;
-//    P3DIR |= BIT6;
-//    P3DIR |= BIT7;
+    P3DIR |= BIT4;
+    P3DIR |= BIT5;
+    P3DIR |= BIT6;
+    P3DIR |= BIT7;
 
     // Configure PJ and P3 ports (LEDs) as outputs
 	PJOUT |= BIT0;
