@@ -13,7 +13,10 @@ int main(void)
 	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
 	
 	// Access J.0 ports and change direction; BIT0 generic for 0x01
-	PJDIR |= BIT0 + BIT1 + BIT2 + BIT3;
+	PJDIR |= BIT0;
+	PJDIR |= BIT1;
+	PJDIR |= BIT2;
+    PJDIR |= BIT3;
 
 //    P3DIR |= BIT4;
 //    P3DIR |= BIT5;
@@ -21,15 +24,21 @@ int main(void)
 //    P3DIR |= BIT7;
 
     // Configure PJ and P3 ports (LEDs) as outputs
-	PJOUT |= BIT0 + BIT1 + BIT2 + BIT3;
-//	PJOUT |= BIT1;
-//    PJOUT |= BIT2;
-//    PJOUT |= BIT3;
+	PJOUT |= BIT0;
+	PJOUT |= BIT1;
+    PJOUT |= BIT2;
+    PJOUT |= BIT3;
 
 //    P3OUT |= BIT4;
 //    P3OUT |= BIT5;
 //    P3OUT |= BIT6;
 //    P3OUT |= BIT7;
+
+    // Turn PJ off
+    PJOUT |= ~BIT0;
+    PJOUT |= ~BIT1;
+    PJOUT |= ~BIT2;
+    PJOUT |= ~BIT3;
 
 	while(1) {
 	    PJOUT ^= BIT0; // toggle bit
