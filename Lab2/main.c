@@ -16,8 +16,8 @@ int main(void)
 //	CSCTL1 |= DCOFSEL0 + DCOFSEL1; // alternate method to set 8MHz; (pg81 ug) for high high
 	CSCTL2 |= SELS__DCOCLK; // sets SMCLK to run off DCO (pg82 ug), 011b = DCOCLK
 //	CSCTL2 |= SELS0 + SELS1; // alternate method to set SMCLK to run off DCO; (pg82 ug) for low high high
-	CSCTL3 |= DIVS0 + DIVS2; // sets SMCLK divider to /32 (pg83 ug); 101 = high low high, DIVS1 is low
-//	CSCTL3 |= DIVS__32; // alternate method to /32
+//	CSCTL3 |= DIVS0 + DIVS2; // sets SMCLK divider to /32 (pg83 ug); 101 = high low high, DIVS1 is low
+	CSCTL3 |= DIVS_5; // alternate method to /32 or can also write DIVS__32
 	P3DIR |= BIT4; // change P3.4 direction
 	P3OUT |= BIT4;
 	P3SEL1 |= BIT4; // enable P3.4 to output SMCLK (pg81 ds)
@@ -54,6 +54,7 @@ int main(void)
 */
 
 	/*Exercise 3*/
+/*
     P4DIR &= ~BIT0; // set to 0 to receive input (pg293 ug)
     P4REN |= BIT0; // set P4.0 enable pullup/down
     P4OUT |= BIT0; // set output as pullup
@@ -67,6 +68,8 @@ int main(void)
     while(1) {
         P3DIR |= BIT7; // change direction of P3.7
     }
+*/
+
 	return 0;
 }
 
