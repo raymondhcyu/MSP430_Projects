@@ -5,7 +5,7 @@
    <string>defaultSolution</string>
    <void method="set">
     <object idref="SolutionManager$PersistState0"/>
-    <string>D:\Texas Instruments\ccs\ccs_base\dvt_4.1.0.201905081124\CodeGen\solutions\CodeGenCoverage</string>
+    <string>D:\Texas Instruments\Projects\dvt\AnalysisSolutionsTemp\AnalysisSolution1569124358421\null</string>
    </void>
   </void>
  </object>
@@ -14,10 +14,10 @@
  <void id="ArrayList0" method="get">
   <object idref="SolutionManager$PersistState0"/>
   <void method="add">
-   <string>D:\Texas Instruments\Projects\dvt\AnalysisSolutionsTemp\AnalysisSolution1568961131991\null</string>
+   <string>D:\Texas Instruments\ccs\ccs_base\dvt_4.1.0.201905081124\CodeGen\solutions\CodeGenCoverage</string>
   </void>
   <void method="add">
-   <string>D:\Texas Instruments\ccs\ccs_base\dvt_4.1.0.201905081124\CodeGen\solutions\CodeGenCoverage</string>
+   <string>D:\Texas Instruments\Projects\dvt\AnalysisSolutionsTemp\AnalysisSolution1569124358421\null</string>
   </void>
  </void>
 </void>
