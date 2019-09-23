@@ -19,6 +19,7 @@ int main(void)
 	CSCTL3 |= DIVS0 + DIVS2; // sets SMCLK divider to /32 (pg83 ug); 101 = high low high, DIVS1 is low
 //	CSCTL3 |= DIVS__32; // alternate method to /32
 	P3DIR |= BIT4; // change P3.4 direction
+	P3OUT |= BIT4;
 	P3SEL1 |= BIT4; // enable P3.4 to output SMCLK (pg81 ds)
 	P3SEL0 |= BIT4; // enable P3.4 to outputSMCLK (pg81 ds)
 */
@@ -53,7 +54,24 @@ int main(void)
 */
 
 	/*Exercise 3*/
-    P4DIR |= BIT0;
-    P4IN |= BIT0;
+    P4DIR &= ~BIT0; // set to 0 to receive input (pg293 ug)
+    P4REN |= BIT0; // set P4.0 enable pullup/down
+    P4OUT |= BIT0; // set output as pullup
+
+    P4IE |= BIT0; // enable interrupt on that pin (pg296 ug)
+    P4IES &= ~BIT0; // flat low/high transition; do P4IES = BIT0 for high/low transition (pg296 ug)
+    P4IFG &= ~BIT0; // clear flag
+    _BIS_SR(GIE); // enable global interrupt (GIE = Global Interrupt Enable)
+//    __enable_interrupt(); // Enable Global interrupts
+
+    while(1) {
+        P3DIR |= BIT7; // change direction of P3.7
+    }
 	return 0;
 }
+
+#pragma vector = PORT4_VECTOR; // Port_4 b/c P4
+    __interrupt void Port4_ISR(void) {
+        P3OUT ^= BIT7; // toggle bit
+        P4IFG &= ~BIT0; // clear flag
+    }
