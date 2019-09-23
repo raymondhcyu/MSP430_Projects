@@ -1,5 +1,6 @@
 #include <msp430.h> 
-
+#define RXD BIT0
+#define TXD BIT1
 
 /**
  * main.c
@@ -24,9 +25,11 @@ int main(void)
 	// Set async clock
     CSCTL0_H = CSKEY >> 8; // enables CS registers, can also do = 0xA5 (pg80 ug [ug = user guide])
     CSCTL1 &= ~DCORSEL; // DCORSEL set to 0 ug72
-    CSCTL1 |= DCOFSEL0 + DCOFSEL1; // (pg81 ug) for high high
+    CSCTL1 |= DCOFSEL0 + DCOFSEL1; // (pg81 ug) for 8MHz 11b
     CSCTL2 |= SELA0 + SELA1; // set ACLK to run off DCO; (pg82 ug) for low high high
-    CSCTL3 |= DIVA0 + DIVA2; // sets ACLK divider to /32 (pg83 ug); 101 = high low high, DIVS1 is low
+
+    P2SEL0 &= ~(RXD + TXD); // set to 00 ds74
+    P2SEL1 |= RXD + TXD; // set to 11 ds74
     UCA0CTLW0 = UCSSEL0; // 01b for async (pg495 ug)
 
 	return 0;
