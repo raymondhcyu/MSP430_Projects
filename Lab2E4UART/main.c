@@ -8,6 +8,8 @@
 int main(void)
 {
     int i;
+    int j = 0;
+    int k;
 	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
     /*Exercise 4*/
     /*
@@ -32,10 +34,15 @@ int main(void)
     P2SEL0 &= ~(RXD + TXD); // set to 00 ds74
     P2SEL1 |= RXD + TXD; // set to 11 ds74
 
-    // Set LED to flash when RX
-    PJDIR |= RXD + TXD;
-    PJOUT |= RXD + TXD;
-    PJOUT &= ~(RXD + TXD);
+    // Set LED to turn on when "J" received, then off when "K" received
+    PJDIR |= BIT0;
+    PJOUT |= BIT0;
+    PJOUT &= ~BIT0;
+
+    // Set LED to flash when RX or TX triggered
+//    PJDIR |= RXD + TXD;
+//    PJOUT |= RXD + TXD;
+//    PJOUT &= ~(RXD + TXD);
 
     // Configure UART
     /*
@@ -55,11 +62,17 @@ int main(void)
 
     while(1)
     {
+        if (j > 25) // 26 letters in alphabet, cycle
+            j = 0;
         while (!(UCA0IFG & UCTXIFG)); // uca0ifg & uctxifg tells you value of interrupt flag, if 0, not it, then 1
-        UCA0TXBUF = 'A'; // char A in transmit buffer, can also put in ASCII
-        PJOUT ^= BIT0;
+        UCA0TXBUF = 'A' + j; // char A in transmit buffer, can also put in ASCII. +1 to get next char
+        if (UCA0TXBUF == 'J')
+            PJOUT |= BIT0;
+        if (UCA0TXBUF == 'K')
+            PJOUT &= ~BIT0;
         for (i = 0; i <20000; i++) // delay
             _NOP();
+        j++;
     }
 
 	return 0;
@@ -71,6 +84,5 @@ __interrupt void USCI_A0_ISR(void)
     unsigned char RxByte = 0;
     RxByte = UCA0RXBUF; // get new byte from Rx buffer
     while (!(UCA0IFG & UCTXIFG)); // wait until previous Tx finished
-    UCA0TXBUF = RxByte; // "echo back received byte", +1 will give next byte, if type c get d, type d, get e, etc.
-    PJOUT ^= BIT0;
+    UCA0TXBUF = RxByte; // "echo back received byte"
 }
