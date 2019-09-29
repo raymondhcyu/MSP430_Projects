@@ -40,16 +40,16 @@ int main(void)
     P3SEL0 |= BIT4 + BIT5;
     P3SEL1 &= ~(BIT4 + BIT5);
 
-    // Set timer A
-    TA1CTL |= TASSEL1 + MC0; // select SMCLK source, initialize up mode (ug349)
+    // Set timer TA0.0 b/c it has it's own vector b/c "special"
+    TA0CTL |= TASSEL1 + MC0; // select SMCLK source, initialize up mode (ug349)
 
     // Set mode (ug351, ug366 diagrams)
-    TA1CCTL1 = CM0 + CM1 + SCS + CAP + CCIE; // capture on rise + falling edge, synchronize capture with timer clock, set to capture, enable interrupt
+    TA0CCTL0 |= CM0 + CM1 + SCS + CAP + CCIE; // capture on rise + falling edge, synchronize capture with timer clock, set to capture, enable interrupt
 
-    // Set P1.2 to receiver Timer B input (ds7 P1.2 has TA1.1)
-    P1DIR &= ~BIT2; // set P1.2 to input ug293
-    P1SEL0 &= ~BIT2;
-    P1SEL1 = BIT2;
+    // Set P1.6 to receiver Timer B input (ds7 P1.6 has TA0.0)
+    P1DIR &= ~BIT6; // set P1.6 to input ug293
+    P1SEL0 |= BIT6;
+    P1SEL1 |= BIT6;
 
     // Set P3.7 to be freq output
     P3DIR |= BIT7;
@@ -60,10 +60,10 @@ int main(void)
     return 0;
 }
 
-#pragma vector = TIMER0_A1_VECTOR
+#pragma vector = TIMER0_A0_VECTOR
 __interrupt void Timer_A(void)
 {
-    currentFreq = TA1CCR0;
+    currentFreq = TA0CCR0;
     if (mark == 0)
     {
         rise = currentFreq;
