@@ -46,9 +46,9 @@ int main(void)
      * UCBRx = int(138.9/16) = 9
      */
     UCA0CTLW0 = UCSSEL0; // 01b for ACLK (pg495 ug)
-    UCA0MCTLW = UCOS16 + UCBRF0 + 0x4900; // 9600 baud from 8MHz ug490; UCOS16 = oversampling enabled, UCBRF0 = modulation stage
-//    UCA0MCTLW = UCOS16 + UCBRF3 + UCBRF1 + 0xF7; // 57600 baud; UCBRFx = decimal 10 = 1010 hex = high low high low
-    UCA0BRW = 52; // ug490 and ug497, bit clock prescaler
+//    UCA0MCTLW = UCOS16 + UCBRF0 + 0x4900; // 9600 baud from 8MHz ug490; UCOS16 = oversampling enabled, UCBRF0 = modulation stage
+    UCA0MCTLW = UCOS16 + UCBRF3 + UCBRF1 + 0xF700; // 57600 baud; UCBRFx = decimal 10 = 1010 hex = high low high low
+    UCA0BRW = 52; // ug490 and ug497, bit clock prescaler ***Why is this 52 for both 9600 and 57600 baud?
     UCA0IE |= UCRXIE; // enable UART RX interrupt
 
     _EINT(); // enable global interrupts
