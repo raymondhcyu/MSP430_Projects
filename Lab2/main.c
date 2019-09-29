@@ -54,6 +54,7 @@ int main(void)
 */
 
 	/*Exercise 3*/
+/*
     P4DIR &= ~BIT0; // set to 0 to receive input (pg293 ug)
     P4REN |= BIT0; // set P4.0 enable pullup/down
     P4OUT |= BIT0; // set output as pullup
@@ -67,7 +68,7 @@ int main(void)
     while(1) {
         P3DIR |= BIT7; // change direction of P3.7
     }
-
+*/
 
 	return 0;
 }
