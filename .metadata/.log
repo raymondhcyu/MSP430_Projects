@@ -1630,3 +1630,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstud
 
 !ENTRY org.eclipse.cdt.core 1 0 2019-09-29 13:57:34.400
 !MESSAGE Indexed 'Lab2E5Timer' (1 sources, 5 headers) in 0.121 sec: 633 declarations; 1,014 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-09-29 15:37:07.143
+!MESSAGE Indexed 'Lab2E5E6Timer' (1 sources, 5 headers) in 0.121 sec: 633 declarations; 1,059 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
