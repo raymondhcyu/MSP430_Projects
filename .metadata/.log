@@ -2074,3 +2074,61 @@ java.lang.IllegalArgumentException: Argument not valid
 !ENTRY com.ti.ccstudio.debug 1 0 2019-09-29 20:23:57.708
 !MESSAGE DS_ERROR: MSP430: Trouble Setting Breakpoint with the Action "Finish Auto Run" at 0xccf6: Software breakpoint conflicts with one or more enabled hardware triggers
 
+!SESSION 2019-09-29 21:44:50.111 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2019-09-29 21:44:51.819
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2019-09-29 21:44:51.820
+!MESSAGE debugServerDir=D:/Texas Instruments/ccs/ccs_base/DebugServer
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-09-29 21:45:03.852
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-09-29 21:45:03.909
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-09-29 21:45:03.912
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.ti.ccstudio.ui 1 0 2019-09-29 21:45:05.050
+!MESSAGE CCS IDE session started!
+	CCS build: 9.1.0.00010
+	CCS location: D:/Texas Instruments/ccs
+	Workspace location: D:/Texas Instruments/Projects
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-09-29 21:45:05.275
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-09-29 21:45:05.276
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-09-29 21:45:05.277
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-09-29 21:45:05.279
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-09-29 21:45:05.280
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-09-29 21:45:05.286
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-09-29 21:45:05.289
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-09-29 21:45:05.292
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-09-29 21:45:05.294
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-09-29 21:45:05.303
+!MESSAGE CloudTrace interface loaded

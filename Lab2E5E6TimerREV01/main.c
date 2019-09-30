@@ -40,19 +40,16 @@ int main(void)
     P3SEL1 &= ~(BIT4 + BIT5);
 
     // Set timer TA0.0 b/c it has it's own vector b/c "special"
-    TA0CTL |= TASSEL1 + MC1; // select SMCLK source, initialize continuous mode (ug349) to go up to 0xFFFF, assuming that TA0CCR0 within
+    TA0CTL |= TASSEL1 + MC1 + TAIE; // select SMCLK source, initialize continuous mode (ug349) to go up to 0xFFFF, assuming that TA0CCR0 within
 
     // Set mode (ug351, ug366 diagrams)
-    TA0CCTL0 |= CM0 + CM1 + SCS + CAP + CCIE; // capture on rise + falling edge, synchronize capture with timer clock, set to capture, enable interrupt
+    TA0CCTL0 |= CM_3 + SCS + CAP + CCIE; // capture on rise + falling edge, synchronize capture with timer clock, set to capture, enable interrupt
+    TA0CCTL0 &= ~(CCIS0 + CCIS1);
 
     // Set P1.6 to receiver Timer B input (ds7 P1.6 has TA0.0)
     P1DIR &= ~BIT6; // set P1.6 to input ug293
     P1SEL0 |= BIT6;
-    P1SEL1 |= BIT6;
-
-    // Set P3.7 to be freq output
-    P3DIR |= BIT7;
-    P3OUT &= BIT7;
+    P1SEL1 &= ~BIT6;
 
     _EINT(); // enable global interrupts
 
@@ -62,17 +59,39 @@ int main(void)
 #pragma vector = TIMER0_A0_VECTOR
 __interrupt void Timer_A(void)
 {
-    int currentFreq = TA0CCR0;
-    if (mark == 0)
+    if ((TA0CCTL0 & CM_3) == CM_1) // if rising edge
     {
-        rise = currentFreq;
-        mark = 1;
-        P3OUT ^= BIT7;
+        rise = TA0R; // timer counter
+        TA0CCTL0 &= ~CM_1; // clear rising edge capture to capture falling edge next
+        TA0CCTL0 |= CM_2; // falling edge
     }
-    else
+
+    else if ((TA0CCTL0 & CM_3) == CM_2) // if falling edge
     {
-        fall = currentFreq;
-        mark = 0;
+        if ((TA0CCTL0 & COV) == COV) // check for overflow
+        {
+            rise = rise - 0xFFFF;
+            TA0CCTL0 &= ~COV; // reset overflow flag
+        }
+        fall = TA0R;
+        TA0CCTL0 &= ~CM_2; // clear falling edge capture to capture rising edge next
+        TA0CCTL0 |= CM_1; // rising edge
+
+        freq = fall - rise;
     }
-    freq = fall - rise;
+
+    TA0CCTL0 &= CCIFG; // clear flag
+
+//    int currentFreq = TA0CCR0;
+//    if (mark == 0)
+//    {
+//        rise = currentFreq;
+//        mark = 1;
+//    }
+//    else
+//    {
+//        fall = currentFreq;
+//        mark = 0;
+//    }
+//    freq = fall - rise;
 }
