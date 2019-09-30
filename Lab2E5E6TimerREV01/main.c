@@ -40,6 +40,7 @@ int main(void)
     P3SEL1 &= ~(BIT4 + BIT5);
 
     // Set timer TA0.0 b/c it has it's own vector b/c "special"
+    // NOTE: Need to connect jumper from P3.4 or P3.5 to P1.6 to receive clock
     TA0CTL |= TASSEL1 + MC1 + TAIE; // select SMCLK source, initialize continuous mode (ug349) to go up to 0xFFFF, assuming that TA0CCR0 within
 
     // Set mode (ug351, ug366 diagrams)
@@ -94,6 +95,7 @@ __interrupt void Timer_A(void)
         mark = 0;
     }
     freq = fall - rise;
+
     if (freq < 0)
         freq = freq * -1;
 }

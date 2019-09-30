@@ -2132,3 +2132,11 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstud
 
 !ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-09-29 21:45:05.303
 !MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-09-30 09:52:44.603
+!MESSAGE DS_ERROR: MSP430: Error initializing emulator: Could not find MSP-FET430UIF on specified COM port
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-09-30 09:52:45.183
+!MESSAGE DS_ERROR: Error initializing emulator:
+Could not find MSP-FET430UIF on specified COM port
