@@ -1,10 +1,10 @@
 #include <msp430.h>
 
 // Define global vars for interrupt
-unsigned int rise = 0;
-unsigned int fall = 0;
-int freq = 0; // falling - rising
-int mark = 0; // record if rising or falling
+volatile unsigned int rise = 0;
+volatile unsigned int fall = 0;
+volatile int freq = 0; // falling - rising
+volatile int mark = 0; // record if rising or falling
 
 /**
  * main.c

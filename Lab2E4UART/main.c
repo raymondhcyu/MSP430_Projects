@@ -60,20 +60,13 @@ int main(void)
 
     _EINT(); // enable global interrupts
 
-    while(1)
-    {
-        if (j > 25) // 26 letters in alphabet, cycle
-            j = 0;
-        while (!(UCA0IFG & UCTXIFG)); // uca0ifg & uctxifg tells you value of interrupt flag, if 0, not it, then 1
-        UCA0TXBUF = 'A' + j; // char A in transmit buffer, can also put in ASCII. +1 to get next char
-        if (UCA0TXBUF == 'J')
-            PJOUT |= BIT0;
-        if (UCA0TXBUF == 'K')
-            PJOUT &= ~BIT0;
-        for (i = 0; i <20000; i++) // delay
-            _NOP();
-        j++;
-    }
+//    while(1)
+//    {
+//        while (!(UCA0IFG & UCTXIFG)); // uca0ifg & uctxifg tells you value of interrupt flag, if 0, not it, then 1
+//
+//        for (i = 0; i <20000; i++) // delay
+//            _NOP();
+//    }
 
 	return 0;
 }
@@ -82,7 +75,16 @@ int main(void)
 __interrupt void USCI_A0_ISR(void)
 {
     unsigned char RxByte = 0;
-    RxByte = UCA0RXBUF; // get new byte from Rx buffer
-    while (!(UCA0IFG & UCTXIFG)); // wait until previous Tx finished
+
+    RxByte = UCA0RXBUF; // get val from RX buffer
+//    RxByte = RxByte + 1; // cycle next code
     UCA0TXBUF = RxByte; // "echo back received byte"
+
+    while (!(UCA0IFG & UCTXIFG)); // wait until the previous Tx is finished
+
+    if (RxByte == 'j')
+        PJOUT |= BIT0;
+
+    if (RxByte == 'k')
+        PJOUT &= ~BIT0;
 }
