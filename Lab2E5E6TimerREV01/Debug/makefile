@@ -122,34 +122,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-E5E6Timer.out \
+Lab2E5E6TimerREV01.out \
 
 EXE_OUTPUTS__QUOTED += \
-"E5E6Timer.out" \
+"Lab2E5E6TimerREV01.out" \
 
 BIN_OUTPUTS += \
-E5E6Timer.hex \
+Lab2E5E6TimerREV01.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"E5E6Timer.hex" \
+"Lab2E5E6TimerREV01.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "E5E6Timer.out"
+	@$(MAKE) --no-print-directory -Onone "Lab2E5E6TimerREV01.out"
 
 # Tool invocations
-E5E6Timer.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+Lab2E5E6TimerREV01.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: MSP430 Linker'
-	"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"E5E6Timer.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="E5E6Timer_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "E5E6Timer.out" $(ORDERED_OBJS)
+	"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E5E6TimerREV01.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E5E6TimerREV01_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E5E6TimerREV01.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-E5E6Timer.hex: $(EXE_OUTPUTS)
+Lab2E5E6TimerREV01.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: MSP430 Hex Utility'
-	"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/hex430" --memwidth=8 --romwidth=8 -o "E5E6Timer.hex" $(EXE_OUTPUTS__QUOTED)
+	"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/hex430" --memwidth=8 --romwidth=8 -o "Lab2E5E6TimerREV01.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 

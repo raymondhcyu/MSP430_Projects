@@ -4272,3 +4272,391 @@ Finished building target: "E4E5REV02.out"
  
 
 **** Build Finished ****
+
+**** Clean-only build of configuration Debug for project E5E6Timer ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "E4E5REV02.hex"  "E4E5REV02.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project E5E6Timer ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/E5E6Timer" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "E5E6Timer.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"E5E6Timer.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="E5E6Timer_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "E5E6Timer.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "E5E6Timer.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project E5E6Timer ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'E5E6Timer.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E5E6TimerREV01" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab2E5E6TimerREV01.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E5E6TimerREV01.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E5E6TimerREV01_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E5E6TimerREV01.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E5E6TimerREV01.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E5E6TimerREV01" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 181: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 187: warning #112-D: statement is unreachable
+"../main.c", line 183: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 183: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "Lab2E5E6TimerREV01.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E5E6TimerREV01.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E5E6TimerREV01_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E5E6TimerREV01.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E5E6TimerREV01.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E5E6TimerREV01" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 181: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 187: warning #112-D: statement is unreachable
+"../main.c", line 183: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 183: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 224: warning #552-D: variable "frequency" was set but never used
+Finished building: "../main.c"
+ 
+Building target: "Lab2E5E6TimerREV01.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E5E6TimerREV01.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E5E6TimerREV01_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E5E6TimerREV01.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E5E6TimerREV01.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E5E6TimerREV01" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 181: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 187: warning #112-D: statement is unreachable
+"../main.c", line 183: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 183: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "Lab2E5E6TimerREV01.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E5E6TimerREV01.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E5E6TimerREV01_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E5E6TimerREV01.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E5E6TimerREV01.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E5E6TimerREV01" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 182: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 188: warning #112-D: statement is unreachable
+"../main.c", line 95: warning #179-D: variable "l" was declared but never referenced
+"../main.c", line 184: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 184: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 95: remark #1535-D: (ULP 8.1) variable "l" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+Finished building: "../main.c"
+ 
+Building target: "Lab2E5E6TimerREV01.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E5E6TimerREV01.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E5E6TimerREV01_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E5E6TimerREV01.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E5E6TimerREV01.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E5E6TimerREV01" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 181: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 187: warning #112-D: statement is unreachable
+"../main.c", line 183: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 183: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "Lab2E5E6TimerREV01.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E5E6TimerREV01.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E5E6TimerREV01_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E5E6TimerREV01.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E5E6TimerREV01.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E5E6TimerREV01" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab2E5E6TimerREV01.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E5E6TimerREV01.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E5E6TimerREV01_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E5E6TimerREV01.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E5E6TimerREV01.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E5E6TimerREV01" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 234: warning #225-D: function "printf" declared implicitly
+"../main.c", line 235: warning #225-D: function "fflush" declared implicitly
+"../main.c", line 235: error #20: identifier "stdout" is undefined
+"../main.c", line 234: remark #1532-D: (ULP 5.3) Detected printf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 234: remark #1538-D: (ULP 10.1) ISR Timer_A calls function printf. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 235: remark #1538-D: (ULP 10.1) ISR Timer_A calls function fflush. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E5E6TimerREV01" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 234: warning #225-D: function "printf" declared implicitly
+"../main.c", line 234: remark #1532-D: (ULP 5.3) Detected printf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 234: remark #1538-D: (ULP 10.1) ISR Timer_A calls function printf. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+Finished building: "../main.c"
+ 
+Building target: "Lab2E5E6TimerREV01.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E5E6TimerREV01.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E5E6TimerREV01_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E5E6TimerREV01.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+warning #10229-D: output section ".data" refers to load symbol "_nop" and hence cannot be compressed; compression "lzss" is ignored
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E5E6TimerREV01.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E5E6TimerREV01" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab2E5E6TimerREV01.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E5E6TimerREV01.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E5E6TimerREV01_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E5E6TimerREV01.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E5E6TimerREV01.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E5E6TimerREV01" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab2E5E6TimerREV01.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E5E6TimerREV01.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E5E6TimerREV01_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E5E6TimerREV01.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E5E6TimerREV01.out"
+ 
+
+**** Build Finished ****

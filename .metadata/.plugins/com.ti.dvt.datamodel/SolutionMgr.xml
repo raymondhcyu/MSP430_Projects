@@ -5,7 +5,7 @@
    <string>defaultSolution</string>
    <void method="set">
     <object idref="SolutionManager$PersistState0"/>
-    <string>D:\Texas Instruments\Projects\dvt\AnalysisSolutionsTemp\AnalysisSolution1569780522380\null</string>
+    <string>D:\Texas Instruments\Projects\dvt\AnalysisSolutionsTemp\AnalysisSolution1569799616896\null</string>
    </void>
   </void>
  </object>
@@ -17,7 +17,7 @@
    <string>D:\Texas Instruments\ccs\ccs_base\dvt_4.1.0.201905081124\CodeGen\solutions\CodeGenCoverage</string>
   </void>
   <void method="add">
-   <string>D:\Texas Instruments\Projects\dvt\AnalysisSolutionsTemp\AnalysisSolution1569780522380\null</string>
+   <string>D:\Texas Instruments\Projects\dvt\AnalysisSolutionsTemp\AnalysisSolution1569799616896\null</string>
   </void>
  </void>
 </void>
