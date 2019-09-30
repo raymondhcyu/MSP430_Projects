@@ -1,10 +1,10 @@
 #include <msp430.h>
 
 // Define global vars for interrupt
-volatile unsigned int rise = 0;
-volatile unsigned int fall = 0;
-volatile int freq = 0; // falling - rising
-volatile int mark = 0; // record if rising or falling
+unsigned int rise = 0;
+unsigned int fall = 0;
+int freq = 0; // falling - rising
+int mark = 0; // record if rising or falling
 
 /**
  * main.c
@@ -28,7 +28,7 @@ int main(void)
     TB1CCTL2 = OUTMOD_3; // set capture/compare register to set/reset (ug375)
 
     // Set 500Hz waves (draw up graph to show)
-    TB1CCR0 = 2000; // = (CLK/divider)/target = (8E6/8)/500 aka 4x divisions
+    TB1CCR0 = 2000 - 1; // = (CLK/divider)/target = (8E6/8)/500 aka 4x divisions; subtract one since it counts more
     TB1CCR1 = 1000; // 50% duty cycle, TB1.1 50%
     TB1CCR2 = 1500; // 25% duty cycle, TB1.2 25%
 
@@ -59,39 +59,41 @@ int main(void)
 #pragma vector = TIMER0_A0_VECTOR
 __interrupt void Timer_A(void)
 {
-    if ((TA0CCTL0 & CM_3) == CM_1) // if rising edge
-    {
-        rise = TA0R; // timer counter
-        TA0CCTL0 &= ~CM_1; // clear rising edge capture to capture falling edge next
-        TA0CCTL0 |= CM_2; // falling edge
-    }
-
-    else if ((TA0CCTL0 & CM_3) == CM_2) // if falling edge
-    {
-        if ((TA0CCTL0 & COV) == COV) // check for overflow
-        {
-            rise = rise - 0xFFFF;
-            TA0CCTL0 &= ~COV; // reset overflow flag
-        }
-        fall = TA0R;
-        TA0CCTL0 &= ~CM_2; // clear falling edge capture to capture rising edge next
-        TA0CCTL0 |= CM_1; // rising edge
-
-        freq = fall - rise;
-    }
-
-    TA0CCTL0 &= CCIFG; // clear flag
-
-//    int currentFreq = TA0CCR0;
-//    if (mark == 0)
+//    if ((TA0CCTL0 & CM_3) == CM_1) // if rising edge
 //    {
-//        rise = currentFreq;
-//        mark = 1;
+//        rise = TA0R; // timer counter
+//        TA0CCTL0 &= ~CM_1; // clear rising edge capture to capture falling edge next
+//        TA0CCTL0 |= CM_2; // falling edge
 //    }
-//    else
+//
+//    else if ((TA0CCTL0 & CM_3) == CM_2) // if falling edge
 //    {
-//        fall = currentFreq;
-//        mark = 0;
+//        if ((TA0CCTL0 & COV) == COV) // check for overflow
+//        {
+//            rise = rise - 0xFFFF;
+//            TA0CCTL0 &= ~COV; // reset overflow flag
+//        }
+//        fall = TA0R;
+//        TA0CCTL0 &= ~CM_2; // clear falling edge capture to capture rising edge next
+//        TA0CCTL0 |= CM_1; // rising edge
+//
+//        freq = fall - rise;
 //    }
-//    freq = fall - rise;
+//
+//    TA0CCTL0 &= CCIFG; // clear flag
+
+    int currentFreq = TA0CCR0;
+    if (mark == 0)
+    {
+        rise = currentFreq;
+        mark = 1;
+    }
+    else
+    {
+        fall = currentFreq;
+        mark = 0;
+    }
+    freq = fall - rise;
+    if (freq < 0)
+        freq = freq * -1;
 }
