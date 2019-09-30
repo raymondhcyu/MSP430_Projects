@@ -1,11 +1,10 @@
 #include <msp430.h>
 
 // Define global vars for interrupt
-volatile unsigned int rise;
-volatile unsigned int fall;
-volatile unsigned int freq = 0; // falling - rising
-volatile unsigned int mark = 0; // record if rising or falling
-volatile int currentFreq;
+volatile unsigned int rise = 0;
+volatile unsigned int fall = 0;
+volatile int freq = 0; // falling - rising
+volatile int mark = 0; // record if rising or falling
 
 /**
  * main.c
@@ -41,7 +40,7 @@ int main(void)
     P3SEL1 &= ~(BIT4 + BIT5);
 
     // Set timer TA0.0 b/c it has it's own vector b/c "special"
-    TA0CTL |= TASSEL1 + MC0; // select SMCLK source, initialize up mode (ug349)
+    TA0CTL |= TASSEL1 + MC1; // select SMCLK source, initialize continuous mode (ug349) to go up to 0xFFFF, assuming that TA0CCR0 within
 
     // Set mode (ug351, ug366 diagrams)
     TA0CCTL0 |= CM0 + CM1 + SCS + CAP + CCIE; // capture on rise + falling edge, synchronize capture with timer clock, set to capture, enable interrupt
@@ -63,7 +62,7 @@ int main(void)
 #pragma vector = TIMER0_A0_VECTOR
 __interrupt void Timer_A(void)
 {
-    currentFreq = TA0CCR0;
+    int currentFreq = TA0CCR0;
     if (mark == 0)
     {
         rise = currentFreq;
