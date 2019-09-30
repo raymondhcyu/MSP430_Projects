@@ -1921,3 +1921,12 @@ java.io.FileNotFoundException: D:\Texas Instruments\Projects\E4E5REV01\.ccsproje
 
 !ENTRY org.eclipse.cdt.core 1 0 2019-09-29 16:51:27.000
 !MESSAGE Indexed 'E4E5REV02' (1 sources, 5 headers) in 0.091 sec: 633 declarations; 1,014 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.debug.core 4 5012 2019-09-29 16:59:54.214
+!MESSAGE Launch configuration E4E5REV01 does not exist
+
+!ENTRY org.eclipse.debug.core 4 5012 2019-09-29 16:59:54.214
+!MESSAGE Launch configuration E4E5REV01 does not exist
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-09-29 16:59:55.014
+!MESSAGE Indexed 'E5E6Timer' (1 sources, 5 headers) in 0.074 sec: 640 declarations; 1,097 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
