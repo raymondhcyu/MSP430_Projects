@@ -87,7 +87,7 @@ int main(void) {
 	setTimer();
 	setUART();
 
-    // Set P2.7 to output HIGH
+    // Set P2.7 to output HIGH to power accel
 	P2DIR |= BIT7;
 	P2OUT |= BIT7;
 
@@ -103,15 +103,15 @@ int main(void) {
     P3SEL1 &= ~BIT4;
 
 	// Enable ADC_B (ug449)
-    ADC10CTL0 &= ~ADC10ENC;                        // Ensure ENC is clear
+    ADC10CTL0 &= ~ADC10ENC;                        // ensure ENC is clear
     ADC10CTL0 = ADC10ON + ADC10SHT_5;
     ADC10CTL1 = ADC10SHS_0 + ADC10SHP + ADC10CONSEQ_0 + ADC10SSEL_0;
     ADC10CTL2 &= ~ADC10RES; // 8 bit ADC out
     ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_12;
-    ADC10IV = 0x00;    //Clear all ADC12 channel int flags
-    ADC10IE |= ADC10IE0;  //Enable ADC10 interrupts
+    ADC10IV = 0x00;    // clear all ADC12 channel int flags
+    ADC10IE |= ADC10IE0;  // enable ADC10 interrupts
 
-    ADC10CTL0 |= ADC10ENC | ADC10SC; //Start the first sample. If this is not done the ADC10 interrupt will not trigger.
+    ADC10CTL0 |= ADC10ENC | ADC10SC; // start the first sample. If this is not done the ADC10 interrupt will not trigger.
 
     _EINT(); // enable global interrupts
 
@@ -125,30 +125,30 @@ int main(void) {
 	return 0;
 }
 
-//ADC10 interupt routine
+// ADC10 interrupt routine
 #pragma vector = ADC10_VECTOR
 __interrupt void ADC10_ISR(void)
 {
- if (ADC_counter == 0) //X-axis
+ if (ADC_counter == 0) // X-axis
  {
    ADC10CTL0 &= ~ADC10ENC;
-   ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_13;  //Next channel is the Y-axis
+   ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_13;  // next channel is the Y-axis
    xAcc = ADC10MEM0; // already 8 bits set by ADC10CTL2
    ADC_counter++;
    ADC10CTL0 |= ADC10ENC | ADC10SC;
  }
- else if (ADC_counter == 1)  //Y-axis
+ else if (ADC_counter == 1)  // Y-axis
  {
    ADC10CTL0 &= ~ADC10ENC;
-   ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_14;  //Next channel is the Z-axis
+   ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_14;  // next channel is the Z-axis
    yAcc = ADC10MEM0;
    ADC_counter++;
    ADC10CTL0 |= ADC10ENC | ADC10SC;
  }
- else  //Z-axis
+ else  // Z-axis
  {
    ADC10CTL0 &= ~ADC10ENC;
-   ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_12;  //Next channel is the X-axis
+   ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_12;  // next channel is the X-axis
    zAcc = ADC10MEM0;
    ADC_counter = 0;
    ADC10CTL0 |= ADC10ENC | ADC10SC;
