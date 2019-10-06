@@ -4,7 +4,7 @@
 volatile unsigned int xAcc = 0;
 volatile unsigned int yAcc = 0;
 volatile unsigned int zAcc = 0;
-
+volatile unsigned int ADC_counter = 0; // increment x, y, z axis
 volatile char result[4];
 volatile unsigned int shouldSendData = 0; // marker
 
@@ -73,14 +73,12 @@ void newLine() {
 5. Set up a timer interrupt to trigger an interrupt every 40 ms (25 Hz).
 6. Using timer interrupt, transmit result using UART with 255 as start byte. Data packet should look like 255, X-axis, Y-axis, Z-axis. Check that transmission is active serial terminal.
 7. Sample ADC inside timer interrupt service routine and transmit result to the PC. Check transmission rate using an oscilloscope by probing the UART Tx port, P3.4.
+Sauce: https://forum.43oh.com/topic/948-msp-exp430-accelerometer-and-servo-demo/
  * */
 
 void setClk(void);
 void setTimer(void);
 void setUART(void);
-void readX(void);
-void readY(void);
-void readZ(void);
 
 int main(void) {
 	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
@@ -105,16 +103,21 @@ int main(void) {
     P3SEL1 &= ~BIT4;
 
 	// Enable ADC_B (ug449)
-	ADC10CTL0 &= ~ADC10ENC; // initialize ADC10ENC to 0
-	ADC10CTL0 |= ADC10ON; // turn on
-	ADC10CTL1 |= ADC10SSEL_3; // select SMCLK as source
-	ADC10CTL2 &= ~ADC10RES; // 8 bit resolution ug453
+    ADC10CTL0 &= ~ADC10ENC;                        // Ensure ENC is clear
+    ADC10CTL0 = ADC10ON + ADC10SHT_5;
+    ADC10CTL1 = ADC10SHS_0 + ADC10SHP + ADC10CONSEQ_0 + ADC10SSEL_0;
+    ADC10CTL2 = ADC10RES;
+    ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_12;
+    ADC10IV = 0x00;    //Clear all ADC12 channel int flags
+    ADC10IE |= ADC10IE0;  //Enable ADC10 interrupts
+
+    ADC10CTL0 |= ADC10ENC | ADC10SC; //Start the first sample. If this is not done the ADC10 interrupt will not trigger.
 
     _EINT(); // enable global interrupts
 
 	while(1) {
-        // Set ADC to receive A12, 13, 14 inputs
-        readX();
+        // Functions below do not work; use ADC interrupts instead
+//      readX();
 //      readY();
 //      readZ();
 	    }
@@ -122,15 +125,45 @@ int main(void) {
 	return 0;
 }
 
+//ADC10 interupt routine
+#pragma vector = ADC10_VECTOR
+__interrupt void ADC10_ISR(void)
+{
+ if (ADC_counter == 0) //X-axis
+ {
+   ADC10CTL0 &= ~ADC10ENC;
+   ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_13;  //Next channel is the Y-axis
+   xAcc = ADC10MEM0;
+   ADC_counter++;
+   ADC10CTL0 |= ADC10ENC | ADC10SC;
+ }
+ else if (ADC_counter == 1)  //Y-axis
+ {
+   ADC10CTL0 &= ~ADC10ENC;
+   ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_14;  //Next channel is the Z-axis
+   yAcc = ADC10MEM0;
+   ADC_counter++;
+   ADC10CTL0 |= ADC10ENC | ADC10SC;
+ }
+ else  //Z-axis
+ {
+   ADC10CTL0 &= ~ADC10ENC;
+   ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_12;  //Next channel is the X-axis
+   zAcc = ADC10MEM0;
+   ADC_counter = 0;
+   ADC10CTL0 |= ADC10ENC | ADC10SC;
+ }
+}
+
 #pragma vector = TIMER1_B1_VECTOR
 __interrupt void TIMER1_B1_ISR(void) {
     sendInt(255); // start bit 255
     sendComma();
     sendInt(xAcc);
-//    sendComma();
-//    sendInt(yAcc);
-//    sendComma();
-//    sendInt(zAcc);
+    sendComma();
+    sendInt(yAcc);
+    sendComma();
+    sendInt(zAcc);
     newLine();
     TB1CCTL1 &= ~CCIFG; // reset flag
 }
