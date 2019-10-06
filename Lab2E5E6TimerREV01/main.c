@@ -81,7 +81,7 @@ __interrupt void Timer_A(void)
 //        freq = fall - rise;
 //    }
 //
-//    TA0CCTL0 &= CCIFG; // clear flag
+//    TA0CCTL0 &= ~CCIFG; // clear flag
 
     int currentFreq = TA0CCR0;
     if (mark == 0)
