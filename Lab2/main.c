@@ -12,7 +12,7 @@ int main(void)
 /*
 	CSCTL0_H = CSKEY >> 8; // enables CS registers, can also do = 0xA5 (pg80 ug [ug = user guide])
 	CSCTL1 &= ~DCORSEL; // DCORSEL set to 0
-	CSCTL1 |= DCOFSEL_3; // enables 8MHz DCO (pg16 ds [ds = datasheet]
+	CSCTL1 |= DCOFSEL_3; // enables 8MHz DCO (pg16 ds [ds = datasheet])
 //	CSCTL1 |= DCOFSEL0 + DCOFSEL1; // alternate method to set 8MHz; (pg81 ug) for high high
 	CSCTL2 |= SELS__DCOCLK; // sets SMCLK to run off DCO (pg82 ug), 011b = DCOCLK
 //	CSCTL2 |= SELS0 + SELS1; // alternate method to set SMCLK to run off DCO; (pg82 ug) for low high high
