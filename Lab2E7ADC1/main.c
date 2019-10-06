@@ -106,7 +106,7 @@ int main(void) {
     ADC10CTL0 &= ~ADC10ENC;                        // Ensure ENC is clear
     ADC10CTL0 = ADC10ON + ADC10SHT_5;
     ADC10CTL1 = ADC10SHS_0 + ADC10SHP + ADC10CONSEQ_0 + ADC10SSEL_0;
-    ADC10CTL2 = ADC10RES;
+    ADC10CTL2 &= ~ADC10RES; // 8 bit ADC out
     ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_12;
     ADC10IV = 0x00;    //Clear all ADC12 channel int flags
     ADC10IE |= ADC10IE0;  //Enable ADC10 interrupts
@@ -133,7 +133,7 @@ __interrupt void ADC10_ISR(void)
  {
    ADC10CTL0 &= ~ADC10ENC;
    ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_13;  //Next channel is the Y-axis
-   xAcc = ADC10MEM0;
+   xAcc = ADC10MEM0; // already 8 bits set by ADC10CTL2
    ADC_counter++;
    ADC10CTL0 |= ADC10ENC | ADC10SC;
  }
