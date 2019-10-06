@@ -6547,3 +6547,1354 @@ Finished building target: "Lab2E7ADC1.out"
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 115: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 121: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 127: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 132: warning #112-D: statement is unreachable
+"../main.c", line 137: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 138: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 139: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 140: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 141: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 142: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 143: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 144: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 121: warning #112-D: statement is unreachable
+"../main.c", line 126: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 130: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 131: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 132: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 133: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 170: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 178: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 186: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 121: warning #112-D: statement is unreachable
+"../main.c", line 126: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 130: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 131: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 132: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 133: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 170: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 179: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 187: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 121: warning #112-D: statement is unreachable
+"../main.c", line 126: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 133: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 170: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10BUSY. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 180: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 188: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 121: warning #112-D: statement is unreachable
+"../main.c", line 126: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 133: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 170: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10BUSY. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 179: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 187: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E7ADC1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E7ADC1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 128: warning #112-D: statement is unreachable
+"../main.c", line 135: remark #1538-D: (ULP 10.1) ISR USCI_A0_ISR calls function sendData. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 185: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10BUSY. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 194: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 202: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 207: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E7ADC1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 128: warning #112-D: statement is unreachable
+"../main.c", line 135: remark #1538-D: (ULP 10.1) ISR USCI_A0_ISR calls function sendData. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 186: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10BUSY. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 195: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 203: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 208: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 128: warning #112-D: statement is unreachable
+"../main.c", line 137: remark #1538-D: (ULP 10.1) ISR USCI_A0_ISR calls function sendData. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 188: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10BUSY. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 197: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 205: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 210: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 125: error #171: expected a declaration
+"../main.c", line 126: error #171: expected a declaration
+"../main.c", line 128: error #609: this pragma must immediately precede a declaration
+At end of source: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 86: remark #1535-D: (ULP 8.1) variable "marker" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 123: warning #112-D: statement is unreachable
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 130: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 135: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 174: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 182: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 190: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 86: remark #1535-D: (ULP 8.1) variable "marker" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E7ADC1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E4UART ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E4UART" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 10: warning #179-D: variable "i" was declared but never referenced
+"../main.c", line 11: warning #179-D: variable "j" was declared but never referenced
+"../main.c", line 12: warning #179-D: variable "k" was declared but never referenced
+"../main.c", line 11: remark #1535-D: (ULP 8.1) variable "j" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../main.c", line 82: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E4UART.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E4UART.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E4UART_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E4UART.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E4UART.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E7ADC1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 54: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 61: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 121: warning #112-D: statement is unreachable
+"../main.c", line 126: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 133: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 172: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 180: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 188: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 54: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 61: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 121: warning #112-D: statement is unreachable
+"../main.c", line 126: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 133: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 172: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 180: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 188: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 54: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 61: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 121: warning #112-D: statement is unreachable
+"../main.c", line 126: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 133: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 172: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 180: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 188: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E7ADC1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 120: warning #112-D: statement is unreachable
+"../main.c", line 125: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 126: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 132: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 171: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 179: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 187: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 120: warning #112-D: statement is unreachable
+"../main.c", line 125: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 126: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 132: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 171: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 179: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 187: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E7ADC1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 122: warning #112-D: statement is unreachable
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 134: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 185: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 193: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 88: warning #225-D: function "SystemInit" declared implicitly
+"../main.c", line 89: warning #225-D: function "StartUpSequence" declared implicitly
+"../main.c", line 125: warning #112-D: statement is unreachable
+"../main.c", line 130: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 131: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 132: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 137: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 188: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 196: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 200: warning #161-D: declaration is incompatible with previous "SystemInit" (declared at line 88)
+"../main.c", line 226: error #20: identifier "SERVO_1" is undefined
+"../main.c", line 226: error #20: identifier "SERVO_2" is undefined
+"../main.c", line 237: warning #161-D: declaration is incompatible with previous "StartUpSequence" (declared at line 89)
+"../main.c", line 254: warning #225-D: function "LongDelay" declared implicitly
+"../main.c", line 265: warning #225-D: function "LongDelay" declared implicitly
+"../main.c", line 252: remark #2553-D: (ULP 14.1) Array index (involving "flag") of type "int". Recommend using "unsigned int"
+"../main.c", line 253: remark #2553-D: (ULP 14.1) Array index (involving "flag") of type "int". Recommend using "unsigned int"
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 88: warning #225-D: function "SystemInit" declared implicitly
+"../main.c", line 89: warning #225-D: function "StartUpSequence" declared implicitly
+"../main.c", line 125: warning #112-D: statement is unreachable
+"../main.c", line 130: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 131: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 132: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 137: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 188: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 196: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 200: warning #161-D: declaration is incompatible with previous "SystemInit" (declared at line 88)
+"../main.c", line 231: warning #161-D: declaration is incompatible with previous "StartUpSequence" (declared at line 89)
+"../main.c", line 248: warning #225-D: function "LongDelay" declared implicitly
+"../main.c", line 259: warning #225-D: function "LongDelay" declared implicitly
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "flag") of type "int". Recommend using "unsigned int"
+"../main.c", line 247: remark #2553-D: (ULP 14.1) Array index (involving "flag") of type "int". Recommend using "unsigned int"
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+ 
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+ 
+>> Compilation failure
+makefile:143: recipe for target 'Lab2E7ADC1.out' failed
+ undefined first referenced
+  symbol       in file     
+ --------- ----------------
+ LongDelay ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Lab2E7ADC1.out" not built
+gmake[1]: *** [Lab2E7ADC1.out] Error 1
+makefile:139: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 128: warning #112-D: statement is unreachable
+"../main.c", line 133: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 134: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 135: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 140: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 191: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 199: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 251: warning #225-D: function "LongDelay" declared implicitly
+"../main.c", line 262: warning #225-D: function "LongDelay" declared implicitly
+"../main.c", line 249: remark #2553-D: (ULP 14.1) Array index (involving "flag") of type "int". Recommend using "unsigned int"
+"../main.c", line 250: remark #2553-D: (ULP 14.1) Array index (involving "flag") of type "int". Recommend using "unsigned int"
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+ 
+ undefined first referenced
+  symbol       in file     
+ --------- ----------------
+ LongDelay ./main.obj      
+ 
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+error #10234-D: unresolved symbols remain
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+ 
+>> Compilation failure
+makefile:143: recipe for target 'Lab2E7ADC1.out' failed
+error #10010: errors encountered during linking; "Lab2E7ADC1.out" not built
+gmake[1]: *** [Lab2E7ADC1.out] Error 1
+makefile:139: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 198: fatal error #1965: cannot open source file "FR_EXP.h"
+1 catastrophic error detected in the compilation of "../main.c".
+Compilation terminated.
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 309: error #148: declaration is incompatible with "unsigned int CalibrateADC(void)" (declared at line 88 of "..\FR_EXP.h")
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 340: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 354: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 374: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 404: remark #2553-D: (ULP 14.1) Array index (involving "flag") of type "int". Recommend using "unsigned int"
+"../main.c", line 405: remark #2553-D: (ULP 14.1) Array index (involving "flag") of type "int". Recommend using "unsigned int"
+"../main.c", line 429: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 122: warning #112-D: statement is unreachable
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 134: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 185: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 193: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E7ADC1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 123: warning #112-D: statement is unreachable
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 130: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 135: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 186: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 194: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 22: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 38: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 41: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 44: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 47: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 54: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 61: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 124: warning #112-D: statement is unreachable
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 130: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 131: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 136: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 187: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 195: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 22: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 38: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 41: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 44: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 47: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 54: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 61: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 124: warning #112-D: statement is unreachable
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 130: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 131: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 136: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 187: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 195: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 22: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 38: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 41: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 44: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 47: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 54: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 61: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 127: warning #112-D: statement is unreachable
+"../main.c", line 132: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 133: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 134: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 139: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 190: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 198: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+ 
+ undefined  first referenced
+  symbol        in file     
+ ---------  ----------------
+ SetUpAccel ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Lab2E7ADC1.out" not built
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+ 
+>> Compilation failure
+makefile:143: recipe for target 'Lab2E7ADC1.out' failed
+gmake[1]: *** [Lab2E7ADC1.out] Error 1
+makefile:139: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 22: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 38: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 41: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 44: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 47: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 54: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 61: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 128: warning #112-D: statement is unreachable
+"../main.c", line 121: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 162: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 163: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 164: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 169: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 220: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 228: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+ 
+ undefined  first referenced
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+  symbol        in file     
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+ 
+>> Compilation failure
+makefile:143: recipe for target 'Lab2E7ADC1.out' failed
+ ---------  ----------------
+ SetUpAccel ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Lab2E7ADC1.out" not built
+gmake[1]: *** [Lab2E7ADC1.out] Error 1
+makefile:139: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 123: warning #112-D: statement is unreachable
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 130: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 135: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 186: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 194: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 124: warning #112-D: statement is unreachable
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 130: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 131: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 136: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 187: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 195: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E7ADC1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 122: warning #112-D: statement is unreachable
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 134: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 185: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 193: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E7ADC1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E7ADC1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2E7ADC1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 16: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 21: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 37: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 46: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 51: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 58: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 122: warning #112-D: statement is unreachable
+"../main.c", line 127: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 128: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 129: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 134: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 173: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 181: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 189: remark #1528-D: (ULP 3.1) Detected flag polling using ADC10IFG. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: "../main.c"
+ 
+Building target: "Lab2E7ADC1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2E7ADC1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2E7ADC1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2E7ADC1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2E7ADC1.out"
+ 
+
+**** Build Finished ****

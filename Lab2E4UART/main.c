@@ -79,7 +79,6 @@ __interrupt void USCI_A0_ISR(void)
     RxByte = UCA0RXBUF; // get val from RX buffer
 //    RxByte = RxByte + 1; // cycle next code
     UCA0TXBUF = RxByte; // "echo back received byte"
-
     while (!(UCA0IFG & UCTXIFG)); // wait until the previous Tx is finished
 
     if (RxByte == 'j')
