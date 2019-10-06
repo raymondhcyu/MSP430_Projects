@@ -2140,3 +2140,166 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstud
 !ENTRY com.ti.ccstudio.debug 1 0 2019-09-30 09:52:45.183
 !MESSAGE DS_ERROR: Error initializing emulator:
 Could not find MSP-FET430UIF on specified COM port
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-09-30 10:37:06.576
+!MESSAGE Indexed 'E6JasonTest' (1 sources, 5 headers) in 0.166 sec: 633 declarations; 1,014 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2019-10-06 09:30:20.076 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2019-10-06 09:30:22.236
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2019-10-06 09:30:22.236
+!MESSAGE debugServerDir=D:/Texas Instruments/ccs/ccs_base/DebugServer
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-10-06 09:30:35.604
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-10-06 09:30:35.647
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-10-06 09:30:35.647
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.ti.ccstudio.ui 1 0 2019-10-06 09:30:36.272
+!MESSAGE CCS IDE session started!
+	CCS build: 9.1.0.00010
+	CCS location: D:/Texas Instruments/ccs
+	Workspace location: D:/Texas Instruments/Projects
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-10-06 09:30:36.572
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-10-06 09:30:36.573
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-10-06 09:30:36.574
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-10-06 09:30:36.576
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-10-06 09:30:36.578
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-10-06 09:30:36.585
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-10-06 09:30:36.595
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-10-06 09:30:36.602
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-10-06 09:30:36.608
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-10-06 09:30:36.637
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.029
+!MESSAGE >>1570379484027 Ta: (ResourceExplorerPlugin::start discoverCCSPort()) took 11
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.032
+!MESSAGE Plugin start call t.start()
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.033
+!MESSAGE >>1570379484032 Tb: (ResourceExplorerPlugin::new Thread to start plugin 2
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.033
+!MESSAGE REX 1570379484032 [A:plugin start] Starting Server
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.033
+!MESSAGE REX [OS:plugin start] win32
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.034
+!MESSAGE REX [A] startServer()
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.034
+!MESSAGE REX [A-] ResourceExplorerPlugin.p == null
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.035
+!MESSAGE REX attempt_process_cleanup = true
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.311
+!MESSAGE REX 1570379484311 [killServerProcesses] 
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.312
+!MESSAGE REX 1570379484312 Tc: Utilities::startServer preamble280
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.316
+!MESSAGE REX 1570379484316 [D:plugin start] ccs_eclipse_folder: file:/D:/Texas Instruments/ccs/eclipse/
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.317
+!MESSAGE REX 1570379484317 [E:plugin start] ccs_eclipse_folder: D:/Texas Instruments/ccs/eclipse/
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.648
+!MESSAGE REX 1570379484648 Ti: Utilities::proxy 331
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.649
+!MESSAGE REX 1570379484649 These are the commands [D:\Texas Instruments\ccs\tirex/node.exe, app.js, D:\Texas Instruments\ccs\tirex\ti-rex-core/dinfra-desktop/dinfra.js, D:\Texas Instruments\ccs\tirex\ti-rex-core/config/dconfig_localserver.json, D:\Texas Instruments\ccs\tirex\ti-rex-core/config/app_localserver_win.json, --ccs_port=5719, --myHttpPort=55432, --logsDirUncaughtException=C:\Users\Safet\AppData\Local\TEXASI~1\CCS\TEXASI~1\0\dmp\, --ccsVersion=9.1.0.00010, --tirexPluginVersion=4.1.0.201905081124]
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.649
+!MESSAGE REX 1570379484649 Td: Utilities::before pb.start() 337
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.665
+!MESSAGE REX 1570379484665 Te: Utilities::before isAlive loop 15
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.665
+!MESSAGE REX 1570379484665 Tf: Utilities::after ResourceExplorerPlugin.p.isAlive() loop 0
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.666
+!MESSAGE REX pollServerState for up or ready
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:24.666
+!MESSAGE REX Sending 'GET' request to URL : http://127.0.0.1:55432/api/serverstate
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:26.186
+!MESSAGE REX Sending 'GET' request to URL : http://127.0.0.1:55432/api/serverstate
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:27.202
+!MESSAGE REX 1570379487201 Utilities::sendGet Response Code from local server: 503
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:27.702
+!MESSAGE REX Sending 'GET' request to URL : http://127.0.0.1:55432/api/serverstate
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:27.707
+!MESSAGE REX 1570379487706 Utilities::sendGet Response Code from local server: 503
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:28.208
+!MESSAGE REX Sending 'GET' request to URL : http://127.0.0.1:55432/api/serverstate
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:28.213
+!MESSAGE REX 1570379488213 Utilities::sendGet Response Code from local server: 503
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:28.714
+!MESSAGE REX Sending 'GET' request to URL : http://127.0.0.1:55432/api/serverstate
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:29.835
+!MESSAGE REX 1570379489835 Utilities::sendGet Response Code from local server: 503
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:30.335
+!MESSAGE REX Sending 'GET' request to URL : http://127.0.0.1:55432/api/serverstate
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:30.335
+!MESSAGE REX 1570379490335 Utilities::sendGet Response Code from local server: 503
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:30.836
+!MESSAGE REX Sending 'GET' request to URL : http://127.0.0.1:55432/api/serverstate
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:30.855
+!MESSAGE REX 1570379490855 Utilities::sendGet Response Code from local server: 200
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:30.856
+!MESSAGE REX [serverStatus] ready
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:30.856
+!MESSAGE REX serverState is ready
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2019-10-06 09:31:30.861
+!MESSAGE REX 1570379490861 Tg: Utilities::after server isAlive 6195
