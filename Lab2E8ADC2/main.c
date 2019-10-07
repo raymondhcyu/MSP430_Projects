@@ -55,6 +55,13 @@ void sendComma() {
     UCA0TXBUF = ' ';
 }
 
+void sendDegs() {
+    while (!(UCA0IFG & UCTXIFG));
+    UCA0TXBUF = ' ';
+    while (!(UCA0IFG & UCTXIFG));
+    UCA0TXBUF = 'C';
+}
+
 void newLine() {
     while (!(UCA0IFG & UCTXIFG));
     UCA0TXBUF = '\n';
@@ -90,19 +97,19 @@ int main(void)
         PJOUT = BIT0; // turn on one LED for default
         int roomTemp = 20;
 
-        if (temperature > roomTemp)
-            PJOUT = BIT1;
         if (temperature > roomTemp + 10)
-            PJOUT = BIT2;
+            PJOUT = BIT1;
         if (temperature > roomTemp + 20)
-            PJOUT = BIT3;
+            PJOUT = BIT2;
         if (temperature > roomTemp + 30)
-            P3OUT = BIT4;
+            PJOUT = BIT3;
         if (temperature > roomTemp + 40)
-            P3OUT = BIT5;
+            P3OUT = BIT4;
         if (temperature > roomTemp + 50)
-            P3OUT = BIT6;
+            P3OUT = BIT5;
         if (temperature > roomTemp + 60)
+            P3OUT = BIT6;
+        if (temperature > roomTemp + 70)
             P3OUT = BIT7;
         else {
             PJOUT &= ~0x0F;
@@ -118,13 +125,14 @@ __interrupt void ADC10_ISR(void) {
    ADC10CTL0 &= ~ADC10ENC;
    ADC10MCTL0 = ADC10SREF_1 + ADC10INCH_4;
    temperature = ADC10MEM0 >> 2; // already 8 bits set by ADC10CTL2
-   temperature = temperature - 80;
+   temperature = temperature - 85;
    ADC10CTL0 |= ADC10ENC | ADC10SC;
 }
 
 #pragma vector = TIMER1_B1_VECTOR
 __interrupt void TIMER1_B1_ISR(void) {
     sendInt(temperature);
+    sendDegs();
     newLine();
     TB1CCTL1 &= ~CCIFG; // reset flag
 }
@@ -134,7 +142,7 @@ void setClk() {
     CSCTL1 &= ~DCORSEL; // DCORSEL set to 0 ug72
     CSCTL1 |= DCOFSEL0 + DCOFSEL1; // (pg81 ug) for 8MHz 11b
     CSCTL2 |= SELM0 + SELM1 + SELA0 + SELA1 + SELS0 + SELS1; // set all CLK to run off DCO; (ug82)
-    CSCTL3 |= DIVS__8; // set SMCLK divider to /8
+    CSCTL3 |= DIVS__32; // set SMCLK divider to /32
 }
 
 void setTimer() {
@@ -142,9 +150,9 @@ void setTimer() {
     TB1CTL |= TBSSEL1 + MC0; // select SMCLK source, initialize up mode (ug372)
     TB1CCTL1 = OUTMOD_3 + CCIE; // set/reset and interrupt enable (ug375, ug366 diagrams)
 
-    // Set 25Hz waves (draw up graph to show)
-    TB1CCR0 = 40000 - 1; // = (CLK/divider)/target = (8E6/8)/500 aka 4x divisions; subtract one since it counts more
-    TB1CCR1 = 20000; // 50% duty cycle
+    // Set 10Hz waves (draw up graph to show)
+    TB1CCR0 = 25000 - 1; // = (CLK/divider)/target = (8E6/8)/10; subtract one since it counts more
+    TB1CCR1 = 12500; // 50% duty cycle
 }
 
 void setUART() {
