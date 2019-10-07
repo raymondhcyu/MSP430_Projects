@@ -2708,3 +2708,22 @@ Could not find MSP-FET430UIF on specified COM port
 !ENTRY com.ti.ccstudio.debug 1 0 2019-10-06 22:22:24.338
 !MESSAGE DS_ERROR: Error initializing emulator:
 Could not find MSP-FET430UIF on specified COM port
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-06 22:24:25.218
+!MESSAGE Indexed 'JasonTest' (1 sources, 5 headers) in 0.082 sec: 633 declarations; 1,014 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-10-06 22:29:06.655
+!MESSAGE DS_ERROR: MSP430: Error initializing emulator: No USB FET was found
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-10-06 22:29:06.953
+!MESSAGE DS_ERROR: Error initializing emulator:
+No USB FET was found
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-10-06 22:35:28.534
+!MESSAGE DS_ERROR: MSP430: Error initializing emulator: Could not find MSP-FET430UIF on specified COM port
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-10-06 22:35:28.754
+!MESSAGE DS_ERROR: Error initializing emulator:
+Could not find MSP-FET430UIF on specified COM port

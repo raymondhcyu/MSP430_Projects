@@ -54,6 +54,15 @@ void newLine() {
     UCA0TXBUF = '\r';
 }
 
+// Sauce: https://forum.43oh.com/topic/1643-g2553-hardware-uart-hello-world-example/
+void message(char* txMessage) {
+    unsigned int i = 0;
+    while(txMessage[i]) {
+        UCA0TXBUF = txMessage[i];
+        i++;
+    }
+}
+
 struct Queue* queue;
 
 void setClk(void);
@@ -63,10 +72,13 @@ int main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
 
-    queue = CreateQueue(50);
-
+    queue = CreateQueue(5);
     setClk();
     setUART();
+
+    // Status LED
+    PJDIR |= BIT0;
+    PJOUT |= BIT0;
 
     _EINT(); // enable global interrupts
 
@@ -84,6 +96,7 @@ int main(void)
         if(i) // single new line
             newLine();
 
+        PJOUT ^= BIT0;
         __delay_cycles(100000); // to avoid spamming serial reader
     }
     return 0;
@@ -93,13 +106,21 @@ int main(void)
 __interrupt void USCI_A0_ISR(void){
     unsigned char RxByte = 0;
     RxByte = UCA0RXBUF; // get new byte from the Rx buffer
+
+    // Check if receive byte is to pop
     if (RxByte == ' ') {
-       char popByte = Dequeue(queue);
-       while (!(UCA0IFG & UCTXIFG));
-       UCA0TXBUF = popByte;
-       __delay_cycles(1000000); // to show popped item
-       newLine();
-    } else {
+        if (IsEmpty(queue))
+                message("Underrun!");
+        char popByte = Dequeue(queue);
+        while (!(UCA0IFG & UCTXIFG));
+        UCA0TXBUF = popByte;
+        __delay_cycles(1000000); // to show popped item
+        newLine();
+    }
+    // Else enqueue
+    else {
+        if (IsFull(queue))
+            message("Overrun!");
         Enqueue(queue, RxByte);
     }
 }
