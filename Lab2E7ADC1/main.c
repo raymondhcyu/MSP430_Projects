@@ -78,6 +78,7 @@ Sauce: https://forum.43oh.com/topic/948-msp-exp430-accelerometer-and-servo-demo/
 void setClk(void);
 void setTimer(void);
 void setUART(void);
+void setADC(void);
 
 int main(void) {
 	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
@@ -85,6 +86,7 @@ int main(void) {
 	setClk();
 	setTimer();
 	setUART();
+	setADC();
 
     // Set P2.7 to output HIGH to power accel
 	P2DIR |= BIT7;
@@ -100,17 +102,6 @@ int main(void) {
     P3OUT &= ~BIT4;
     P3SEL0 |= BIT4;
     P3SEL1 &= ~BIT4;
-
-	// Enable ADC_B (ug449)
-    ADC10CTL0 &= ~ADC10ENC;                        // ensure ENC is clear
-    ADC10CTL0 = ADC10ON + ADC10SHT_5;
-    ADC10CTL1 = ADC10SHS_0 + ADC10SHP + ADC10CONSEQ_0 + ADC10SSEL_0;
-    ADC10CTL2 &= ~ADC10RES; // 8 bit ADC out
-    ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_12;
-    ADC10IV = 0x00;    // clear all ADC12 channel int flags
-    ADC10IE |= ADC10IE0;  // enable ADC10 interrupts
-
-    ADC10CTL0 |= ADC10ENC | ADC10SC; // start the first sample. If this is not done the ADC10 interrupt will not trigger.
 
     _EINT(); // enable global interrupts
 
@@ -194,6 +185,19 @@ void setUART() {
 //    UCA0MCTLW = UCOS16 + UCBRF3 + UCBRF1 + 0xF700; // 57600 baud; UCBRFx = decimal 10 = 1010 hex = high low high low
     UCA0BRW = 52; // ug490 and ug497, bit clock prescaler ***Why is this 52 for both 9600 and 57600 baud?
     UCA0IE |= UCRXIE; // enable UART RX interrupt
+}
+
+void setADC() {
+    // Enable ADC_B (ug449)
+    ADC10CTL0 &= ~ADC10ENC;                        // ensure ENC is clear
+    ADC10CTL0 = ADC10ON + ADC10SHT_5;
+    ADC10CTL1 = ADC10SHS_0 + ADC10SHP + ADC10CONSEQ_0 + ADC10SSEL_0;
+    ADC10CTL2 &= ~ADC10RES; // 8 bit ADC out
+    ADC10MCTL0 = ADC10SREF_0 + ADC10INCH_12;
+    ADC10IV = 0x00;    // clear all ADC12 channel int flags
+    ADC10IE |= ADC10IE0;  // enable ADC10 interrupts
+
+    ADC10CTL0 |= ADC10ENC | ADC10SC; // start the first sample. If this is not done the ADC10 interrupt will not trigger.
 }
 
 void readX() {
