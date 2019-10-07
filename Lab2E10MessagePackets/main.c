@@ -47,6 +47,13 @@ char Dequeue(struct Queue* theQueue) {
     return item;
 }
 
+void sendComma() {
+    while (!(UCA0IFG & UCTXIFG));
+    UCA0TXBUF = ',';
+    while (!(UCA0IFG & UCTXIFG));
+    UCA0TXBUF = ' ';
+}
+
 void newLine() {
     while (!(UCA0IFG & UCTXIFG));
     UCA0TXBUF = '\n';
@@ -68,7 +75,9 @@ struct Queue* queue;
 
 void setClk(void);
 void setUART(void);
+void setTimer(void);
 void message(void);
+void setLEDs(void);
 
 int main(void)
 {
@@ -77,6 +86,8 @@ int main(void)
     queue = CreateQueue(5);
     setClk();
     setUART();
+    setTimer();
+    setLEDs();
 
     // Status LED
     PJDIR |= BIT0;
@@ -85,20 +96,59 @@ int main(void)
     _EINT(); // enable global interrupts
 
     while (1) {
-        int i;
-        // Send elements of queue to TX buffer to print
-        for(i = 0; i < queue->size; i++) {
-            while (!(UCA0IFG & UCTXIFG));
-            int idx = queue->front + i;
-            if (idx >= queue->capacity) {
-                idx -= queue->capacity;
+        if (queue->size == 5) { // 5 elements in queue
+            // Send elements of queue to TX buffer to print
+            int i;
+            for(i = 0; i < queue->size; i++) {
+                while (!(UCA0IFG & UCTXIFG));
+                int idx = queue->front + i;
+                if (idx >= queue->capacity) {
+                    idx -= queue->capacity;
+                }
+                UCA0TXBUF = queue->array[idx];
             }
-            UCA0TXBUF = queue->array[idx];
-        }
-        if(i) // single new line
-            newLine();
+            if(i) // single new line
+                newLine();
 
-        PJOUT ^= BIT0;
+            // Process incoming data
+            char startByte = Dequeue(queue); // first byte
+            if (startByte == 255) { // sequence begin
+                char commandByte = Dequeue(queue);
+                char dataByte1 = Dequeue(queue);
+                char dataByte2 = Dequeue(queue);
+                char escapeByte = Dequeue(queue);
+
+                // Escape byte conditions
+                if (escapeByte == 1) {
+                    dataByte1 == 255;
+                }
+                else if (escapeByte == 2) {
+                    dataByte2 == 255;
+                }
+                else if (escapeByte == 3) {
+                    dataByte1 = 255;
+                    dataByte2 = 255;
+                }
+
+                int data = dataByte1 << 8 + dataByte2; // bit shift 8x to combine data into 16 bits
+
+                if (commandByte == 0)
+                    PJOUT ^= BIT0;
+                else if (commandByte == 1)
+                    PJOUT ^= BIT1;
+                else if (commandByte == 2)
+                    PJOUT ^= BIT2;
+                else if (commandByte == 3)
+                    PJOUT ^= BIT3;
+                else if (commandByte == 4) {
+                    // If other command received, change frequency of timer (in kHz)
+                    uint8_t timerLimit = (8000000 / 8) / data; // 8MHz clock with 8 divider
+                    uint8_t dutyCycle = timerLimit / 2; // 50% duty cycle
+                    TB1CCR0 = timerLimit;
+                    TB1CCR1 = dutyCycle;
+                }
+            }
+        }
         __delay_cycles(100000); // to avoid spamming serial reader
     }
     return 0;
@@ -139,7 +189,7 @@ void setClk() {
     CSCTL1 &= ~DCORSEL; // DCORSEL set to 0 ug72
     CSCTL1 |= DCOFSEL0 + DCOFSEL1; // (pg81 ug) for 8MHz 11b
     CSCTL2 |= SELM0 + SELM1 + SELA0 + SELA1 + SELS0 + SELS1; // set all CLK to run off DCO; (ug82)
-    CSCTL3 |= DIVS__32; // set SMCLK divider to /32
+    CSCTL3 |= DIVS__8; // set SMCLK divider to /8
 }
 
 void setUART() {
@@ -151,4 +201,26 @@ void setUART() {
 //    UCA0MCTLW = UCOS16 + UCBRF3 + UCBRF1 + 0xF700; // 57600 baud; UCBRFx = decimal 10 = 1010 hex = high low high low
     UCA0BRW = 52; // ug490 and ug497, bit clock prescaler ***Why is this 52 for both 9600 and 57600 baud?
     UCA0IE |= UCRXIE; // enable UART RX interrupt
+}
+
+void setTimer() {
+    // Set timer B
+    TB1CTL |= TBSSEL1 + MC0; // select SMCLK source, initialize up mode (ug372)
+    TB1CCTL1 = OUTMOD_3 + CCIE; // set/reset and interrupt enable (ug375, ug366 diagrams)
+
+    // Set 100Hz waves to start
+    TB1CCR0 = 10000 - 1; // = (CLK/divider)/target = (8E6/8)/100; subtract one since it counts more
+    TB1CCR1 = 5000; // 50% duty cycle
+}
+
+void setLEDs() {
+    PJDIR |= 0x0F; // 00001111 // unsure LSB
+    P3DIR |= 0xF0; // 11110000
+
+    // Toggle to show ready
+    PJOUT |= 0x0F;
+    P3OUT |= 0xF0;
+    __delay_cycles(1000000);
+    PJOUT &= ~0x0F; // turn off
+    P3OUT &= ~0xF0; // turn off
 }
