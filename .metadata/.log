@@ -2458,3 +2458,6 @@ Could not find MSP-FET430UIF on specified COM port
 !ENTRY com.ti.ccstudio.debug 1 0 2019-10-06 16:41:43.499
 !MESSAGE DS_ERROR: Error initializing emulator:
 No USB FET was found
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-06 16:52:00.562
+!MESSAGE Indexed 'Lab2E8ADC2' (1 sources, 5 headers) in 0.091 sec: 633 declarations; 1,014 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)

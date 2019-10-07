@@ -6,7 +6,6 @@ volatile unsigned int yAcc = 0;
 volatile unsigned int zAcc = 0;
 volatile unsigned int ADC_counter = 0; // increment x, y, z axis
 volatile char result[4];
-volatile unsigned int shouldSendData = 0; // marker
 
 /* Sauce to convert int to string for UART: https://e2e.ti.com/support/microcontrollers/msp430/f/166/t/291574?CCS-function-for-Integer-to-string-conversion-for-UART-output*/
 void itoa(long unsigned int value, volatile char* result, int base) {
