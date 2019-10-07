@@ -54,19 +54,21 @@ void newLine() {
     UCA0TXBUF = '\r';
 }
 
+char error[] = "Error";
 // Sauce: https://forum.43oh.com/topic/1643-g2553-hardware-uart-hello-world-example/
-void message(char* txMessage) {
+void errorMessage(void) {
     unsigned int i = 0;
-    while(txMessage[i]) {
-        UCA0TXBUF = txMessage[i];
-        i++;
-    }
+    for (i = 0; i < 5; i++){
+            while (!(UCA0IFG & UCTXIFG));
+            UCA0TXBUF = error[i];
+        }
 }
 
 struct Queue* queue;
 
 void setClk(void);
 void setUART(void);
+void message(void);
 
 int main(void)
 {
@@ -109,8 +111,12 @@ __interrupt void USCI_A0_ISR(void){
 
     // Check if receive byte is to pop
     if (RxByte == ' ') {
-        if (IsEmpty(queue))
-                message("Underrun!");
+        if (IsEmpty(queue)) {
+            errorMessage();
+            newLine();
+            __delay_cycles(1000000); // to show popped item
+        }
+
         char popByte = Dequeue(queue);
         while (!(UCA0IFG & UCTXIFG));
         UCA0TXBUF = popByte;
@@ -119,8 +125,11 @@ __interrupt void USCI_A0_ISR(void){
     }
     // Else enqueue
     else {
-        if (IsFull(queue))
-            message("Overrun!");
+        if (IsFull(queue)) {
+            errorMessage();
+            newLine();
+            __delay_cycles(1000000); // to show popped item
+        }
         Enqueue(queue, RxByte);
     }
 }
