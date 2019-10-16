@@ -184,7 +184,7 @@ void setADC() {
     ADC10CTL0 = ADC10ON + ADC10SHT_3;
     ADC10CTL1 = ADC10SHS_0 + ADC10SHP + ADC10CONSEQ_0 + ADC10SSEL_0;
     ADC10CTL2 = ADC10RES; // 8 or 10 bit ADC out
-    ADC10MCTL0 = ADC10SREF_1 + ADC10INCH_4; // ADC10INCH for temperature
+    ADC10MCTL0 = ADC10SREF_1 + ADC10INCH_4; // ADC10INCH_4 for temperature
     ADC10IV = 0x00;    // clear all ADC12 channel int flags
     ADC10IE |= ADC10IE0;  // enable ADC10 interrupts
 

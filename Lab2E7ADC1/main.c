@@ -79,6 +79,7 @@ void setClk(void);
 void setTimer(void);
 void setUART(void);
 void setADC(void);
+void setAccel(void);
 
 int main(void) {
 	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
@@ -87,15 +88,7 @@ int main(void) {
 	setTimer();
 	setUART();
 	setADC();
-
-    // Set P2.7 to output HIGH to power accel
-	P2DIR |= BIT7;
-	P2OUT |= BIT7;
-
-	// Set P3.0, 3.1, 3.2 to output A12, A13, A14
-	P3DIR &= ~(BIT0 + BIT1 + BIT2);
-	P3SEL0 |= BIT0 + BIT1 + BIT2; // ds80
-	P3SEL1 |= BIT0 + BIT1 + BIT2;
+	setAccel();
 
     // Set P3.4 to be Timer B output for verification (ds81)
     P3DIR |= BIT4;
@@ -198,6 +191,17 @@ void setADC() {
     ADC10IE |= ADC10IE0;  // enable ADC10 interrupts
 
     ADC10CTL0 |= ADC10ENC | ADC10SC; // start the first sample. If this is not done the ADC10 interrupt will not trigger.
+}
+
+void setAccel() {
+    // Set P2.7 to output HIGH to power accel
+    P2DIR |= BIT7;
+    P2OUT |= BIT7;
+
+    // Set P3.0, 3.1, 3.2 to output A12, A13, A14
+    P3DIR &= ~(BIT0 + BIT1 + BIT2);
+    P3SEL0 |= BIT0 + BIT1 + BIT2; // ds80
+    P3SEL1 |= BIT0 + BIT1 + BIT2;
 }
 
 void readX() {

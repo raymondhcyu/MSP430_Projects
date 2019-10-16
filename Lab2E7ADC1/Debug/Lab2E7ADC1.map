@@ -1,10 +1,10 @@
 ******************************************************************************
                   MSP430 Linker PC v18.12.2                    
 ******************************************************************************
->> Linked Sun Oct  6 17:14:22 2019
+>> Linked Wed Oct 16 10:01:18 2019
 
 OUTPUT FILE NAME:   <Lab2E7ADC1.out>
-ENTRY POINT SYMBOL: "_c_int00_noargs_mpu"  address: 0000c898
+ENTRY POINT SYMBOL: "_c_int00_noargs_mpu"  address: 0000c87e
 
 
 MEMORY CONFIGURATION
@@ -17,7 +17,7 @@ MEMORY CONFIGURATION
   INFOB                 00001800   00000080  00000000  00000080  RWIX
   INFOA                 00001880   00000080  00000000  00000080  RWIX
   RAM                   00001c00   00000400  000000ac  00000354  RWIX
-  FRAM                  0000c200   00003d80  00000752  0000362e  RWIX
+  FRAM                  0000c200   00003d80  00000758  00003628  RWIX
   JTAGSIGNATURE         0000ff80   00000004  00000004  00000000  RWIX  ffff 
   BSLSIGNATURE          0000ff84   00000004  00000004  00000000  RWIX  ffff 
   IPESIGNATURE          0000ff88   00000008  00000008  00000000  RWIX  ffff 
@@ -117,31 +117,32 @@ section   page    origin      length       input sections
 .const     0    0000c22a    00000048     
                   0000c22a    00000048     main.obj (.const:.string)
 
-.text      0    0000c400    00000552     
+.text      0    0000c400    00000558     
                   0000c400    000000ee     rts430x_lc_sd_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
                   0000c4ee    0000007e     main.obj (.text:itoa)
                   0000c56c    0000006a     rts430x_lc_sd_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit_hold_wdt:__TI_auto_init_nobinit_nopinit_hold_wdt)
                   0000c5d6    00000060     main.obj (.text:_isr:ADC10_ISR)
                   0000c636    00000058     rts430x_lc_sd_eabi.lib : div32u.asm.obj (.text)
-                  0000c68e    00000056     main.obj (.text:main)
-                  0000c6e4    0000004e     main.obj (.text:sendInt)
-                  0000c732    00000040     rts430x_lc_sd_eabi.lib : cpy_util.asm.obj (.text:__memcpy_far)
-                  0000c772    0000003e                            : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset:__TI_zero_init_nomemset)
-                  0000c7b0    0000003c                            : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
-                  0000c7ec    0000003a     main.obj (.text:_isr:TIMER1_B1_ISR)
-                  0000c826    0000002c     main.obj (.text:setADC)
-                  0000c852    00000024     main.obj (.text:setUART)
-                  0000c876    00000022     MPU_INIT_FR57XX_LIB_CCS_msp430_large_code_small_data.lib : mpu_init_fr57xx.obj (.text:__mpu_init)
-                  0000c898    00000020     rts430x_lc_sd_eabi.lib : boot.c.obj (.text:_isr:_c_int00_noargs_mpu)
-                  0000c8b8    00000020     main.obj (.text:setClk)
-                  0000c8d8    0000001a     main.obj (.text:newLine)
-                  0000c8f2    0000001a     main.obj (.text:sendComma)
-                  0000c90c    0000001a     main.obj (.text:setTimer)
-                  0000c926    00000018     rts430x_lc_sd_eabi.lib : mult16_f5hw.asm.obj (.text)
-                  0000c93e    00000008                            : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
-                  0000c946    00000006                            : exit.c.obj (.text:abort)
-                  0000c94c    00000004                            : pre_init.c.obj (.text:_system_pre_init)
-                  0000c950    00000002                            : startup.c.obj (.text:_system_post_cinit)
+                  0000c68e    0000004e     main.obj (.text:sendInt)
+                  0000c6dc    00000040     rts430x_lc_sd_eabi.lib : cpy_util.asm.obj (.text:__memcpy_far)
+                  0000c71c    0000003e                            : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset:__TI_zero_init_nomemset)
+                  0000c75a    0000003c                            : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  0000c796    0000003c     main.obj (.text:main)
+                  0000c7d2    0000003a     main.obj (.text:_isr:TIMER1_B1_ISR)
+                  0000c80c    0000002c     main.obj (.text:setADC)
+                  0000c838    00000024     main.obj (.text:setUART)
+                  0000c85c    00000022     MPU_INIT_FR57XX_LIB_CCS_msp430_large_code_small_data.lib : mpu_init_fr57xx.obj (.text:__mpu_init)
+                  0000c87e    00000020     rts430x_lc_sd_eabi.lib : boot.c.obj (.text:_isr:_c_int00_noargs_mpu)
+                  0000c89e    00000020     main.obj (.text:setAccel)
+                  0000c8be    00000020     main.obj (.text:setClk)
+                  0000c8de    0000001a     main.obj (.text:newLine)
+                  0000c8f8    0000001a     main.obj (.text:sendComma)
+                  0000c912    0000001a     main.obj (.text:setTimer)
+                  0000c92c    00000018     rts430x_lc_sd_eabi.lib : mult16_f5hw.asm.obj (.text)
+                  0000c944    00000008                            : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
+                  0000c94c    00000006                            : exit.c.obj (.text:abort)
+                  0000c952    00000004                            : pre_init.c.obj (.text:_system_pre_init)
+                  0000c956    00000002                            : startup.c.obj (.text:_system_post_cinit)
 
 .bss       0    00001c08    00000004     UNINITIALIZED
                   00001c08    00000004     (.common:result)
@@ -249,9 +250,9 @@ MODULE SUMMARY
        Module                       code   ro data   rw data
        ------                       ----   -------   -------
     .\
-       main.obj                     634    76        12     
+       main.obj                     640    76        12     
     +--+----------------------------+------+---------+---------+
-       Total:                       634    76        12     
+       Total:                       640    76        12     
                                                             
     D:\Texas Instruments\ccs\ccs_base\msp430\lib\FR57xx\MPU_INIT_FR57XX_LIB_CCS_msp430_large_code_small_data.lib
        mpu_init_fr57xx.obj          34     0         0      
@@ -299,7 +300,7 @@ MODULE SUMMARY
        Stack:                       0      0         160    
        Linker Generated:            0      41        0      
     +--+----------------------------+------+---------+---------+
-       Grand Total:                 1362   163       172    
+       Grand Total:                 1368   163       172    
 
 
 LINKER GENERATED COPY TABLES
@@ -355,7 +356,7 @@ address   name
 00001c06  ADC_counter                            
 000004be  BCD2BIN                                
 000004bc  BIN2BCD                                
-0000c946  C$$EXIT                                
+0000c94c  C$$EXIT                                
 000008c0  CDCTL0                                 
 000008c1  CDCTL0_H                               
 000008c0  CDCTL0_L                               
@@ -750,7 +751,7 @@ address   name
 00000460  TB2EX0                                 
 0000046e  TB2IV                                  
 00000450  TB2R                                   
-0000c7ec  TIMER1_B1_ISR                          
+0000c7d2  TIMER1_B1_ISR                          
 000005d0  UCA0ABCTL                              
 000005c6  UCA0BRW                                
 000005c7  UCA0BRW_H                              
@@ -869,10 +870,10 @@ address   name
 0000c22a  __TI_CINIT_Limit                       
 0000c200  __TI_Handler_Table_Base                
 0000c20c  __TI_Handler_Table_Limit               
-0000c93e  __TI_ISR_TRAP                          
+0000c944  __TI_ISR_TRAP                          
 0000c56c  __TI_auto_init_nobinit_nopinit_hold_wdt
 0000c400  __TI_decompress_lzss                   
-0000c7b0  __TI_decompress_none                   
+0000c75a  __TI_decompress_none                   
 0000ffce  __TI_int31                             
 0000ffd0  __TI_int32                             
 0000ffd2  __TI_int33                             
@@ -900,36 +901,37 @@ address   name
 ffffffff  __TI_pprof_out_hndl                    
 ffffffff  __TI_prof_data_size                    
 ffffffff  __TI_prof_data_start                   
-0000c772  __TI_zero_init_nomemset                
+0000c71c  __TI_zero_init_nomemset                
 ffffffff  __c_args__                             
-0000c732  __memcpy_far                           
-0000c876  __mpu_init                             
+0000c6dc  __memcpy_far                           
+0000c85c  __mpu_init                             
 00007513  __mpusam                               
 00000201  __mpuseg                               
 0000c636  __mspabi_divul                         
-0000c926  __mspabi_mpyi_f5hw                     
+0000c92c  __mspabi_mpyi_f5hw                     
 0000c636  __mspabi_remul                         
-0000c898  _c_int00_noargs_mpu                    
+0000c87e  _c_int00_noargs_mpu                    
 0000fffe  _reset_vector                          
 00001f60  _stack                                 
-0000c950  _system_post_cinit                     
-0000c94c  _system_pre_init                       
-0000c946  abort                                  
+0000c956  _system_post_cinit                     
+0000c952  _system_pre_init                       
+0000c94c  abort                                  
 0000c200  fram_ro_start                          
 0000c200  fram_rw_start                          
 0000c400  fram_rx_start                          
 0000c4ee  itoa                                   
-0000c68e  main                                   
+0000c796  main                                   
 00000001  mpusb1                                 
 00000002  mpusb2                                 
-0000c8d8  newLine                                
+0000c8de  newLine                                
 00001c08  result                                 
-0000c8f2  sendComma                              
-0000c6e4  sendInt                                
-0000c826  setADC                                 
-0000c8b8  setClk                                 
-0000c90c  setTimer                               
-0000c852  setUART                                
+0000c8f8  sendComma                              
+0000c68e  sendInt                                
+0000c80c  setADC                                 
+0000c89e  setAccel                               
+0000c8be  setClk                                 
+0000c912  setTimer                               
+0000c838  setUART                                
 00001c00  xAcc                                   
 00001c02  yAcc                                   
 00001c04  zAcc                                   
@@ -1502,26 +1504,27 @@ address   name
 0000c5d6  ADC10_ISR                              
 0000c636  __mspabi_divul                         
 0000c636  __mspabi_remul                         
-0000c68e  main                                   
-0000c6e4  sendInt                                
-0000c732  __memcpy_far                           
-0000c772  __TI_zero_init_nomemset                
-0000c7b0  __TI_decompress_none                   
-0000c7ec  TIMER1_B1_ISR                          
-0000c826  setADC                                 
-0000c852  setUART                                
-0000c876  __mpu_init                             
-0000c898  _c_int00_noargs_mpu                    
-0000c8b8  setClk                                 
-0000c8d8  newLine                                
-0000c8f2  sendComma                              
-0000c90c  setTimer                               
-0000c926  __mspabi_mpyi_f5hw                     
-0000c93e  __TI_ISR_TRAP                          
-0000c946  C$$EXIT                                
-0000c946  abort                                  
-0000c94c  _system_pre_init                       
-0000c950  _system_post_cinit                     
+0000c68e  sendInt                                
+0000c6dc  __memcpy_far                           
+0000c71c  __TI_zero_init_nomemset                
+0000c75a  __TI_decompress_none                   
+0000c796  main                                   
+0000c7d2  TIMER1_B1_ISR                          
+0000c80c  setADC                                 
+0000c838  setUART                                
+0000c85c  __mpu_init                             
+0000c87e  _c_int00_noargs_mpu                    
+0000c89e  setAccel                               
+0000c8be  setClk                                 
+0000c8de  newLine                                
+0000c8f8  sendComma                              
+0000c912  setTimer                               
+0000c92c  __mspabi_mpyi_f5hw                     
+0000c944  __TI_ISR_TRAP                          
+0000c94c  C$$EXIT                                
+0000c94c  abort                                  
+0000c952  _system_pre_init                       
+0000c956  _system_post_cinit                     
 0000ffce  __TI_int31                             
 0000ffd0  __TI_int32                             
 0000ffd2  __TI_int33                             
@@ -1552,4 +1555,4 @@ ffffffff  __TI_prof_data_size
 ffffffff  __TI_prof_data_start                   
 ffffffff  __c_args__                             
 
-[612 symbols]
+[613 symbols]
