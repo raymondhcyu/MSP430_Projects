@@ -3522,3 +3522,11 @@ Could not find MSP-FET430UIF on specified COM port
 !ENTRY com.ti.ccstudio.debug 1 0 2019-10-16 19:34:27.050
 !MESSAGE DS_ERROR: Error initializing emulator:
 No USB FET was found
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-10-16 19:50:54.747
+!MESSAGE DS_ERROR: MSP430: Error initializing emulator: Could not find MSP-FET430UIF on specified COM port
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-10-16 19:50:55.215
+!MESSAGE DS_ERROR: Error initializing emulator:
+Could not find MSP-FET430UIF on specified COM port
