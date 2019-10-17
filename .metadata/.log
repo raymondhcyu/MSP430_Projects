@@ -3530,3 +3530,103 @@ No USB FET was found
 !ENTRY com.ti.ccstudio.debug 1 0 2019-10-16 19:50:55.215
 !MESSAGE DS_ERROR: Error initializing emulator:
 Could not find MSP-FET430UIF on specified COM port
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-10-16 20:17:02.239
+!MESSAGE DS_ERROR: MSP430: Trouble Setting Breakpoint with the Action "Finish Auto Run" at 0xcade: Software breakpoint conflicts with one or more enabled hardware triggers
+
+
+!ENTRY com.ti.ccstudio.debug 4 0 2019-10-16 20:17:13.092
+!MESSAGE TI MSP430 USB1/MSP430 - WARNING: opCode alignment dropped! (Requested address 0xc931 | aligned address 0xc932)
+
+!ENTRY com.ti.ccstudio.debug 4 0 2019-10-16 20:17:19.363
+!MESSAGE TI MSP430 USB1/MSP430 - WARNING: opCode alignment dropped! (Requested address 0xc943 | aligned address 0xc944)
+
+!ENTRY com.ti.ccstudio.debug 4 0 2019-10-16 20:17:19.383
+!MESSAGE TI MSP430 USB1/MSP430 - WARNING: opCode alignment dropped! (Requested address 0xc943 | aligned address 0xc944)
+
+!ENTRY com.ti.ccstudio.debug 4 0 2019-10-16 20:17:19.451
+!MESSAGE TI MSP430 USB1/MSP430 - WARNING: opCode alignment dropped! (Requested address 0xc931 | aligned address 0xc932)
+
+!ENTRY org.eclipse.ui 4 4 2019-10-16 20:29:04.209
+!MESSAGE An internal error has occurred.
+!STACK 0
+com.ti.xpcom.XPCOMException: The function "createDisAsmManager" returned an error condition  (0x80780001)
+	at com.ti.xpcom.internal.XPCOMJavaProxy.callXPCOMMethod(Native Method)
+	at com.ti.xpcom.internal.XPCOMJavaProxy.invoke(XPCOMJavaProxy.java:105)
+	at com.sun.proxy.$Proxy43.createDisAsmManager(Unknown Source)
+	at com.ti.debug.engine.impl.DspTask.createDisAsmManager(DspTask.java:427)
+	at com.ti.ccstudio.debug.service.contexts.DisassemblyDMContext.<init>(DisassemblyDMContext.java:93)
+	at com.ti.ccstudio.debug.service.contexts.ThreadDMContext.getDisassemblyDMContext(ThreadDMContext.java:352)
+	at com.ti.ccstudio.debug.internal.ui.disassembly.CCSDisassemblyBackend.updateExtendedPCAnnotation(CCSDisassemblyBackend.java:115)
+	at org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyPart.updatePCAnnotation(DisassemblyPart.java:2521)
+	at org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyPart.doPending(DisassemblyPart.java:2565)
+	at org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyPart.updateInvalidSource(DisassemblyPart.java:1687)
+	at org.eclipse.cdt.dsf.debug.internal.ui.disassembly.SourceColorerJob.runInUIThread(SourceColorerJob.java:60)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3906)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3537)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1170)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1059)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:667)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:597)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:656)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:592)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1498)
+
+!ENTRY org.eclipse.ui 4 0 2019-10-16 20:29:04.354
+!MESSAGE Unhandled event loop exception
+!STACK 0
+com.ti.xpcom.XPCOMException: The function "createDisAsmManager" returned an error condition  (0x80780001)
+	at com.ti.xpcom.internal.XPCOMJavaProxy.callXPCOMMethod(Native Method)
+	at com.ti.xpcom.internal.XPCOMJavaProxy.invoke(XPCOMJavaProxy.java:105)
+	at com.sun.proxy.$Proxy43.createDisAsmManager(Unknown Source)
+	at com.ti.debug.engine.impl.DspTask.createDisAsmManager(DspTask.java:427)
+	at com.ti.ccstudio.debug.service.contexts.DisassemblyDMContext.<init>(DisassemblyDMContext.java:93)
+	at com.ti.ccstudio.debug.service.contexts.ThreadDMContext.getDisassemblyDMContext(ThreadDMContext.java:352)
+	at com.ti.ccstudio.debug.internal.ui.disassembly.CCSDisassemblyBackend.updateExtendedPCAnnotation(CCSDisassemblyBackend.java:115)
+	at org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyPart.updatePCAnnotation(DisassemblyPart.java:2521)
+	at org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyPart.gotoFrame(DisassemblyPart.java:2289)
+	at org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyPart.doPendingPCUpdates(DisassemblyPart.java:2417)
+	at org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyPart.updatePC(DisassemblyPart.java:2492)
+	at org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyBackendDsf$7$1.run(DisassemblyBackendDsf.java:390)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3906)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3537)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1170)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1059)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:667)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:597)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:656)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:592)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1498)

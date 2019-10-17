@@ -7,6 +7,7 @@
 #include <math.h>
 #include <stdint.h>
 
+volatile uint16_t accTotal = 0;
 volatile unsigned int xAcc = 0;
 volatile unsigned int yAcc = 0;
 volatile unsigned int zAcc = 0;
@@ -85,10 +86,10 @@ void Enqueue(struct Queue* theQueue, char item) {
     theQueue->size = theQueue->size + 1;
 }
 
-char Dequeue(struct Queue* theQueue) {
+uint16_t Dequeue(struct Queue* theQueue) {
     if (IsEmpty(theQueue))
         return INT_MIN; // most negative integer
-    char item = theQueue->array[theQueue->front];
+    uint16_t item = theQueue->array[theQueue->front];
     theQueue->front = (theQueue->front + 1) % theQueue->capacity;
     theQueue->size = theQueue->size - 1;
     return item;
@@ -133,6 +134,12 @@ int main(void)
     setTimer();
     setADC();
     setAccel();
+
+    // Set P3.4 to be Timer B output for verification (ds81)
+    P3DIR |= BIT4;
+    P3OUT &= ~BIT4;
+    P3SEL0 |= BIT4;
+    P3SEL1 &= ~BIT4;
 
 //    while (1) {
 //        int i;
@@ -214,17 +221,43 @@ __interrupt void ADC10_ISR(void)
  }
 }
 
+int i;
+
 #pragma vector = TIMER1_B1_VECTOR
 __interrupt void TIMER1_B1_ISR(void) {
 
     if (IsFull(queue)) {
-        Dequeue(queue);
+        accTotal = 0;
+        for (i = 0; i < 16; i++)
+            accTotal = accTotal + Dequeue(queue);
+        accTotal = accTotal / 16;
+        if (accTotal > 130) { // flash 10Hz
+            TB1CCR0 = 25000;
+            TB1CCR1 = 12500;
+        }
+        else if (accTotal > 120) { // flash 15Hz
+            TB1CCR0 = 16667;
+            TB1CCR1 = 8333;
+        }
+        else if (accTotal > 110) { // flash 20Hz
+            TB1CCR0 = 12500;
+            TB1CCR1 = 6250;
+        }
+        else if (accTotal > 100){ // flash 100Hz
+            TB1CCR0 = 2500;
+            TB1CCR1 = 1250;
+        }
     }
     else
         Enqueue(queue, xAcc);
 
-    PJOUT ^= BIT0;
-    __delay_cycles(100000);
+//    uint16_t timerCap = (8000000 / 8) / data;
+//    uint16_t timerSwitch = timerCap / 2;
+//    TB1CCR0 = timerCap;
+//    TB1CCR1 = timerSwitch;
+
+//    TB1CCR0 = 10000 - 1; // = (CLK/divider)/target = (8E6/32)/100 aka 4x divisions; subtract one since it counts more
+//    TB1CCR1 = 5000; // 50% duty cycle
     TB1CCTL1 &= ~CCIFG; // reset flag
 }
 
@@ -233,7 +266,7 @@ void setClk() {
     CSCTL1 &= ~DCORSEL; // DCORSEL set to 0 ug72
     CSCTL1 |= DCOFSEL0 + DCOFSEL1; // (pg81 ug) for 8MHz 11b
     CSCTL2 |= SELM0 + SELM1 + SELA0 + SELA1 + SELS0 + SELS1; // set all CLK to run off DCO; (ug82)
-    CSCTL3 |= DIVS__8; // set SMCLK divider to /8
+    CSCTL3 |= DIVS__32; // set SMCLK divider to /8
 }
 
 void setUART() {
@@ -264,8 +297,8 @@ void setTimer() {
     TB1CTL |= TBSSEL1 + MC0; // select SMCLK source, initialize up mode (ug372)
     TB1CCTL1 = OUTMOD_3 + CCIE; // set/reset and interrupt enable (ug375, ug366 diagrams)
 
-    // Set 100Hz waves (draw up graph to show)
-    TB1CCR0 = 10000 - 1; // = (CLK/divider)/target = (8E6/8)/100 aka 4x divisions; subtract one since it counts more
+    // Set X waves (draw up graph to show)
+    TB1CCR0 = 10000 - 1; // = (CLK/divider)/target = (8E6/32)/100 aka 4x divisions; subtract one since it counts more
     TB1CCR1 = 5000; // 50% duty cycle
 }
 
