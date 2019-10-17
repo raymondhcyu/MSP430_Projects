@@ -147,6 +147,7 @@ __interrupt void TIMER1_B1_ISR(void) {
     newLine();
 
     PJOUT ^= BIT0;
+//    __delay_cycles(100000); // to avoid spamming serial reader
     TB1CCTL1 &= ~CCIFG; // reset flag
 }
 
