@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker PC v18.12.2                    
 ******************************************************************************
->> Linked Tue Oct 15 22:04:03 2019
+>> Linked Wed Oct 16 19:12:36 2019
 
 OUTPUT FILE NAME:   <Lab2ExamE1.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs_mpu"  address: 0000c2d8

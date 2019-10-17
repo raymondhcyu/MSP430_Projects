@@ -24105,3 +24105,297 @@ Finished building target: "Lab2E7ADC1.out"
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Lab2E5E6TimerREV01 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2E5E6TimerREV01.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2ExamE1 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2ExamE1" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 33: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 328 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 329 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 330 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 331 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 332 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 333 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 335 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 336 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 337 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 338 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 339 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 340 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 341 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 342 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 343 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 345 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 346 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 347 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 349 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 350 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 351 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 353 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 354 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 355 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 357 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 358 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 359 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 360 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 361 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 362 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 368 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 369 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 370 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 371 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 372 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 373 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 390 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 392 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 394 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 398 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 400 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 407 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 409 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 411 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 415 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 417 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 424 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 426 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 428 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 432 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include/_defs.h", line 434 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "Lab2ExamE1.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2ExamE1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2ExamE1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2ExamE1.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2ExamE1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2ExamE2 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2ExamE2" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 15: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 15: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 20: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 36: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 39: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 42: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 45: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 50: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 57: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 136: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 137: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 138: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 139: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 140: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 141: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 142: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 143: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+Finished building: "../main.c"
+ 
+Building target: "Lab2ExamE2.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2ExamE2.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2ExamE2_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2ExamE2.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2ExamE2.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2ExamE2 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2ExamE2" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 15: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 15: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 20: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 36: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 39: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 42: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 45: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 50: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 57: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 136: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 137: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 138: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 139: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 140: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 141: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 142: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 143: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+Finished building: "../main.c"
+ 
+Building target: "Lab2ExamE2.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2ExamE2.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2ExamE2_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2ExamE2.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2ExamE2.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2ExamE2 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2ExamE2" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 15: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 15: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 20: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 36: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 39: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 42: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 45: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 50: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 57: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 138: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 139: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 140: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 141: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 142: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 143: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 144: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 145: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 211: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "Lab2ExamE2.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2ExamE2.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2ExamE2_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2ExamE2.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2ExamE2.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2ExamE2 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2ExamE2" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 22: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 38: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 41: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 44: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 47: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 54: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 61: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 140: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 141: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 142: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 143: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 144: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 145: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendComma. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 146: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 147: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 213: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "Lab2ExamE2.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2ExamE2.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2ExamE2_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2ExamE2.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2ExamE2.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2ExamE2 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="D:/Texas Instruments/ccs/ccs_base/msp430/include" --include_path="D:/Texas Instruments/Projects/Lab2ExamE2" --include_path="D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 17: warning #145-D: a value of type "volatile char *" cannot be used to initialize an entity of type "char *"
+"../main.c", line 22: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 38: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 41: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 44: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 47: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 52: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 54: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 61: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 142: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function sendInt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 147: remark #1538-D: (ULP 10.1) ISR TIMER1_B1_ISR calls function newLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 213: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "Lab2ExamE2.out"
+Invoking: MSP430 Linker
+"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --define=__MSP430FR5739__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Lab2ExamE2.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Texas Instruments/ccs/ccs_base/msp430/include" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Texas Instruments/ccs/ccs_base/msp430/lib/FR57xx" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/lib" -i"D:/Texas Instruments/ccs/tools/compiler/ti-cgt-msp430_18.12.2.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2ExamE2_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Lab2ExamE2.out" "./main.obj" "../lnk_msp430fr5739.cmd"  -llibmpu_init_fr57xx.a -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Lab2ExamE2.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2ExamE2 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2ExamE2.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2ExamE2 ****
+
+"D:\\Texas Instruments\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'Lab2ExamE2.out' is up to date.
+
+**** Build Finished ****

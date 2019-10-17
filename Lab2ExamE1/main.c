@@ -55,8 +55,8 @@ void setTimer() {
     TB1CCTL1 = OUTMOD_3; // set/reset and interrupt enable (ug375, ug366 diagrams)
     TB1CCTL2 = OUTMOD_3; // set capture/compare register to set/reset (ug375)
 
-    // Set 500Hz waves (draw up graph to show)
-    TB1CCR0 = 2000 - 1; // = (CLK/divider)/target = (8E6/8)/500; subtract one since it counts more
-    TB1CCR1 = 1000; // 50% duty cycle
-    TB1CCR2 = 1500; // 25% duty cycle
+    // Set 2000Hz waves (draw up graph to show)
+    TB1CCR0 = 500 - 1; // = (CLK/divider)/target = (8E6/8)/500; subtract one since it counts more
+    TB1CCR1 = 250; // 50% duty cycle
+    TB1CCR2 = 375; // 25% duty cycle
 }
