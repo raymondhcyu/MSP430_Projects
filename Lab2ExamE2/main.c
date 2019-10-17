@@ -35,17 +35,17 @@ void itoa(long unsigned int value, volatile char* result, int base) {
 
 void sendInt(int num) {
     itoa(num, result, 10);
-    while (!(UCA0IFG & UCTXIFG));
-    UCA0TXBUF = result[0];
+//    while (!(UCA0IFG & UCTXIFG));
+//    UCA0TXBUF = result[0];
 
     while (!(UCA0IFG & UCTXIFG));
     UCA0TXBUF = result[1];
 
-    while (!(UCA0IFG & UCTXIFG));
-    UCA0TXBUF = result[2];
-
-    while (!(UCA0IFG & UCTXIFG));
-    UCA0TXBUF = result[3];
+//    while (!(UCA0IFG & UCTXIFG));
+//    UCA0TXBUF = result[2];
+//
+//    while (!(UCA0IFG & UCTXIFG));
+//    UCA0TXBUF = result[3];
 }
 
 void sendComma() {
@@ -144,9 +144,9 @@ __interrupt void TIMER1_B1_ISR(void) {
 //    sendInt(yAcc);
 //    sendComma();
 //    sendInt(zAcc);
-    newLine();
+//    newLine();
 
-    PJOUT ^= BIT0;
+    P3OUT ^= BIT4;
 //    __delay_cycles(100000); // to avoid spamming serial reader
     TB1CCTL1 &= ~CCIFG; // reset flag
 }
