@@ -55,17 +55,28 @@ void setClk(void);
 void setTimer(void);
 void setUART(void);
 
+volatile unsigned int data1 = 0; // encoder input 1
+volatile unsigned int data2 = 0; // encoder input 2
+volatile unsigned int escape = 0; // data escape byte
+
 int main(void)
 {
 	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
 	
+    queue = createQueue(50);
+
 	// Receive inputs from P1.1 and P1.2
-	P1DIR &= ~(BIT1 BIT2);
+	P1DIR &= ~(BIT1 + BIT2);
 	P1SEL1 |= BIT1 + BIT2;
 	P1SEL0 &= ~(BIT1 + BIT2);
 
 	setTimer();
 	setUART();
+	_EINT();
+
+	while (1) {
+
+	}
 
 	return 0;
 }
@@ -78,6 +89,49 @@ __interrupt void USCI_A1_ISR(void)
     enqueue(queue, RxByte);
 }
 
+#pragma vector = TIMER0_B0_VECTOR
+__interrupt void TIMER0_B0_ISR(void) {
+    // Message format: [Start][CW][CCW][Escape]
+    while (!(UCTXIFG & UCA1IFG)); //
+    UCA1TXBUF = 255;    // start byte
+
+    while (!(UCTXIFG & UCA1IFG)); //
+    UCA1TXBUF = 10;    // start byte
+
+    while (!(UCTXIFG & UCA1IFG)); //
+    UCA1TXBUF = 20;    // start byte
+
+    while (!(UCTXIFG & UCA1IFG)); //
+    UCA1TXBUF = 30;    // start byte
+
+//    while(!(UCTXIFG & UCA1IFG));
+//    data1 = TA0R; // get data from TA0
+//    if (data1 == 255) { // check if 0
+//        escape = 1;
+//        UCA1TXBUF = 0;
+//    }
+//    else
+//        UCA1TXBUF = data1;
+//
+//    while (!(UCTXIFG & UCA1IFG)); // Ensure that we are ready to transmit
+//    data2 = TA1R;
+//    if (data2 == 255) { // check if 0
+//        escape = 2;
+//        UCA1TXBUF = 0;
+//    }
+//    else
+//        UCA1TXBUF = data2;
+//
+//    while(!(UCTXIFG & UCA1IFG));
+//    UCA1TXBUF = escape;    // Finally send the escape byte
+//
+//    // Reset values
+//    escape = 0;
+//    TA0R = 0;
+//    TA1R = 0;
+////    TB0CCTL0 &= ~CCIFG; // reset flag
+}
+
 void setClk() {
     CSCTL0_H = CSKEY >> 8; // enables CS registers, can also do = 0xA5 (pg80 ug [ug = user guide])
     CSCTL1 &= ~DCORSEL; // DCORSEL set to 0 ug72
@@ -88,13 +142,18 @@ void setClk() {
 
 void setTimer() {
     // Set up timer A to receive input as clock
-    TA0CTL |= TASSEL_0 + MC_2;
-    TA1CTL |= TASSEL_0 + MC_2;
+    TA0CTL |= TASSEL_0 + MC_2; // continuous mode
+    TA1CTL |= TASSEL_0 + MC_2; // continuous mode
 
     // Set up timer B to transmit data through UART
-    TB0CTL |= TBSSEL_2 + MC_2;
-    TB0CCTL0 |= OUTMOD_3 + CCIE;
+    TB0CTL |= TBSSEL_2 + MC_2; // continuous mode
+    TB0CCTL0 |= OUTMOD_3 + CCIE; // enable interrupt
 
+    // Set P1.4 and P1.5 as outputs
+    P1DIR |= BIT4 + BIT5;
+    P1OUT &= ~(BIT4 + BIT5);
+    P1SEL0 |= BIT4 + BIT5;
+    P1SEL1 &= ~(BIT4 + BIT5);
 }
 
 void setUART() {

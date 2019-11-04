@@ -2,6 +2,47 @@
 #define RXD BIT5
 #define TXD BIT6
 
+volatile char result[4];
+
+/* Sauce to convert int to string for UART: https://e2e.ti.com/support/microcontrollers/msp430/f/166/t/291574?CCS-function-for-Integer-to-string-conversion-for-UART-output*/
+void itoa(long unsigned int value, volatile char* result, int base) {
+      // Check that base is valid
+      if (base < 2 || base > 36) { *result = '\0';}
+
+      char* ptr = result, *ptr1 = result, tmp_char;
+      int tmp_value;
+
+      do {
+        tmp_value = value;
+        value /= base;
+        *ptr++ = "zyxwvutsrqponmlkjihgfedcba9876543210123456789abcdefghijklmnopqrstuvwxyz" [35 + (tmp_value - value * base)];
+      } while ( value );
+
+      // Apply negative sign
+      if (tmp_value < 0) *ptr++ = '-';
+      *ptr-- = '\0';
+      while(ptr1 < ptr) {
+        tmp_char = *ptr;
+        *ptr--= *ptr1;
+        *ptr1++ = tmp_char;
+      }
+}
+
+void sendInt(int num) {
+    itoa(num, result, 10);
+    while (!(UCA0IFG & UCTXIFG));
+    UCA0TXBUF = result[0];
+
+    while (!(UCA0IFG & UCTXIFG));
+    UCA0TXBUF = result[1];
+
+    while (!(UCA0IFG & UCTXIFG));
+    UCA0TXBUF = result[2];
+
+    while (!(UCA0IFG & UCTXIFG));
+    UCA0TXBUF = result[3];
+}
+
 void setClk(void);
 void setTimer(void);
 void setUART(void);
