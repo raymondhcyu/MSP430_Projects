@@ -53,8 +53,8 @@ int main(void) {
 
 //    test1();
 //    test2();
-//    switchIt();
-    setUART();
+    switchIt();
+//    setUART();
 //    setTimer();
 //    setCapture();
 //    flashIt();

@@ -91,7 +91,7 @@ int main(void)
                     dataByte1 = 255;
                     escapeByte = 0;
                 }
-                int data = dataByte1 << 8 | dataByte2;
+                int data = dataByte1 << 8 | dataByte2; // data = dataByte1 + dataByte2*256;
 
                 // Commands 0 to 3 toggle the LEDs
                 if (commandByte == 0) {
